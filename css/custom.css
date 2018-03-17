@@ -1,0 +1,68 @@
+/*
+    Custom css to personalize this bootstrap template
+*/
+/* Body style */
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Header navbar */
+.ftco-navbar-light {
+    border-bottom: #207245 1px solid;
+}
+.bg-dark-custom {
+    background-color: #207245;  /*3B574A*/;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.navbar-brand > img {
+    width: 50px;
+    margin: 5px;
+}
+.navbar-brand > span {   
+    display: block;
+}
+
+/* Searchuser and cart */
+.container-search-user-cart {
+    width: 15%;
+    margin: 5px 1.5%; 
+    display: inline-block;
+    text-align: center;   
+}
+.container-search-user-cart > * {
+    color: rgba(255,255,255,.5);
+    font-size: 140%;
+    margin: 5px 5%;
+}
+#menuSearch {
+    display: none;
+}
+.container-search-user-cart input {
+    width: 100%;
+    font-size: 80%;
+}
+@media screen and (max-width: 991px) {
+    .container-search-user-cart {
+        width: 97%;
+    }
+
+    .container-search-user-cart > * {
+        margin: 5px 10%;
+    }
+}
+@media screen and (max-width: 250px) {
+    .container-search-user-cart > * {
+        display: block;
+    }
+}
+.container-search-user-cart > i:hover, .container-search-user-cart > a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
