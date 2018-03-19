@@ -79,7 +79,8 @@ body {
     display: none;
     min-width: 100px;
     width: 90%; 
-    margin: 0;
+    margin: 0 auto;
+    padding: 2%;
     /*height: 320px;*/
 }
 
