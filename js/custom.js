@@ -16,4 +16,59 @@ $(document).ready( function(e) {
 
     });
     
+    /* Show uploaded picture */
+    $('#m_upicture, #m_fpicture').on('change', function () {
+        //alert(this.files[0]);
+        var noPicture = '../images/no-photo.png';
+        var fileTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+        var pic = '';
+        var typeFind = false;
+
+        //get img element
+        var divPicture = jQuery('#' + this.id + '_img');
+
+        if (this.files.length == 1) {
+            pic = this.files[0];
+
+            //Validate if the file selected is a png or jpeg type
+            fileTypes.forEach( function(val) {
+                if (val === pic.type) {
+                    divPicture.slideDown('slow', function () {
+                        divPicture[0].children[0].src = window.URL.createObjectURL(pic);
+                        divPicture[0].children[0].style.display = 'block';
+                        typeFind = true;
+                    });                
+                }
+            });
+        }
+
+        if (!typeFind) {
+            divPicture[0].children[0].src = noPicture;
+            divPicture[0].children[0].style.display = 'block'
+        }
+    });
+
+    /* Show farm, or farmer specific field */
+    $('#m_utype').on('change', function () {
+        var userType = ['1', '2'];  //['Buyer', 'Farmer']
+
+        switch (this.value) {
+            case userType[0]:   //farmer, show block
+                jQuery('.form-farm-fields').slideToggle( function() {
+                    this.style.display = 'none';
+                    //change specific fields to not required
+
+                });
+                break;
+            case userType[1]:    //buyer, Hide block
+                jQuery('.form-farm-fields').slideToggle( function() {
+                    this.style.display = 'block';
+                    //change specific fields to required
+
+                });
+                break;
+        }
+    });
+
+
 });
