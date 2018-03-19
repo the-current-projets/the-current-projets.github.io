@@ -77,7 +77,8 @@ body {
 }
 #m_upicture_img > img , #m_fpicture_img > img {
     display: none;
-    width: 320px; 
+    min-width: 100px;
+    width: 90%; 
     /*height: 320px;*/
 }
 
