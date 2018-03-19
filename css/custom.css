@@ -64,5 +64,20 @@ body {
     color: #fff;
 }
 
-
+/* Create User Modal */
+.create-user-left-side {
+    background-color: #C7DBD0;
+    background: -moz-linear-gradient(#95BCA7, #C7DBD0, #F0F4F1);
+    background: -webkit-linear-gradient(#95BCA7, #C7DBD0, #F0F4F1);
+    background: -o-linear-gradient(#95BCA7, #C7DBD0, #F0F4F1);
+    background: linear-gradient(#95BCA7, #C7DBD0, #F0F4F1);
+}
+.form-farm-fields {
+    display: none;
+}
+#m_upicture_img > img , #m_fpicture_img > img {
+    display: none;
+    width: 320px; 
+    /*height: 320px;*/
+}
 
