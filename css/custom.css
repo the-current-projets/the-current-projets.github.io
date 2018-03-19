@@ -79,6 +79,7 @@ body {
     display: none;
     min-width: 100px;
     width: 90%; 
+    margin: 0;
     /*height: 320px;*/
 }
 
