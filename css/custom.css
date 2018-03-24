@@ -26,6 +26,10 @@ body {
     display: block;
 }
 
+
+
+
+
 /* Searchuser and cart */
 .container-search-user-cart {
     width: 15%;
@@ -83,3 +87,439 @@ body {
     padding: 2%;
 }
 
+/* Julia's work: */
+
+/* class product */
+.product{
+	box-shadow: 3px 4px 9px 4px #888888;
+	margin: auto;
+}
+
+img.ProductPhoto{
+	width:350px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid black;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.ProductForm{
+	text-align: center;
+}
+.ProductForm p{
+	font-family: "Times New Roman";
+}
+h3{
+	font-family: bold;
+	color: black;
+	text-shadow: 3px 3px 5px #818C8B;
+}
+
+/* select Type of a product */
+.dropdownTypeOfProduct{
+	 position: relative;
+	float:left;
+    margin-right: 20px;
+	padding-left: 20px;
+	margin-left: 70px;
+	font-family: 'Times New Roman';
+	padding-top: 23px;
+	display: inline-block;
+	
+}
+.dropdown-contentType{
+	 display: none;
+    position: absolute;
+    background-color: #207245;
+	color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	
+}
+
+.dropdown-contentType a{
+	    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-contentType a:hover {background-color: #f1f1f1}
+
+.dropdownTypeOfProduct:hover .dropdown-contentType {
+    display: block;
+}
+
+.dropdownTypeOfProduct:hover .dropbtnType {
+    background-color: #3e8e41;
+}
+.dropbtnType {
+    background-color: #207245;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* select Category of a prodct */
+
+.dropdownCategoryOfProduct{
+	 position: relative;
+   
+	display: inline-block;
+	font-family: 'Times New Roman';
+	padding-top: 23px;
+	padding-left: 30px;
+	
+}
+.dropdown-contentCategory{
+	  display: none;
+    position: absolute;
+    background-color: #207245;
+	color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	margin-left: 411px;
+	margin-top: 1x;
+	font-family: 'Times New Roman';
+	
+	
+}
+
+.dropdown-contentCategory a{
+	  color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-contentCategory a:hover {background-color: #f1f1f1}
+
+.dropdownCategoryOfProduct:hover .dropdown-contentCategory {
+display:block;
+	
+    margin-left: -46px;
+}
+
+.dropdownCategoryOfProduct:hover .dropbtnCategory{
+    background-color: #3e8e41;
+	
+	
+}
+.dropbtnCategory {
+    background-color: #207245;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	font-family: 'Times New Roman';
+	
+}
+
+
+.dropdownManageProduct {
+    position: relative;
+    display: inline-block;
+	float: right;
+	display: none;
+}
+.dropbtn {
+    background-color: transparent;
+    color: #207245;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border: 1px solid #207245;
+	margin-left:110px;
+}
+
+.dropdown-content a {
+    color: #207245;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdownManageProduct:hover .dropbtn {
+    background-color: transparent;
+	font-style: oblique;
+	font-weight: bolder;
+}
+.dropdownManageProduct:hover .dropdown-content {
+    display: block;
+}
+
+input{
+	background-color: rgba(240,244,241, 1.0);
+	border: none;
+	text-align: center;
+	font-size: 25px;
+	font-family:bold;
+	text-shadow: 3px 3px 5px #818C8B;
+	
+}
+
+#submitProductForm{
+	color: #558F6E;
+	border: 3px solid #558F6E;
+	margin-left: 280px;
+    margin-right: auto;
+	width:20%;
+}
+
+#submitProductForm:hover{
+	background-color: #558F6E;
+	color: white;
+}
+
+#producequantity{
+	border: 1px solid #207245;
+	width:50px;
+}
+
+#oneitemprice{
+	border: 1px solid #207245;
+	width:70px;
+}
+#totalprice{
+	width:70px;
+	border: 1px solid #207245;
+}
+.line{
+width: 360px;
+    height: 15px;
+    border-bottom: 3px solid #207245;
+	margin-top: 0px;
+	padding-top: 0px;
+   
+    }
+
+
+/* Create a Photo for CreateProduce form */
+
+ .uploader {
+	position:relative;
+	overflow:hidden;
+	width:200px; 
+	height:250px;
+	background:transparent;	
+	cursor:pointer;
+	padding:5px;
+	color:#A4A393;
+	
+	margin: 5px;
+}
+
+
+
+#filePhoto{
+    display:none;
+}
+.uploader p{
+	font-family:'Times New Roman';
+	color: #A4A393;
+	text-align: left;
+	padding-left: 35px;
+	margin-top: 90px;
+	font-size: 14px;
+	float: left;
+}
+.uploader img{
+    position:absolute;
+	
+	
+	font-weight:bold;
+    width:200px;
+    height:250px;
+	border:1px solid black;
+    top:-1px;
+    left:-1px;
+    z-index:-1;
+    border:none;
+    background-color: #F0F4F1;
+	
+}
+#dropdownstoRight{
+	margin-left: 190px;
+}
+
+#floatRight{
+	padding-top: 30px;
+	margin: auto;
+}
+label{
+	padding-left: 20px;
+	margin-left: 70px;
+	font-family: 'Times New Roman';
+	font-size: 22px;
+	
+}
+textarea{
+padding-left: 30px;
+	margin-left: 88px;
+	
+	font-family: 'Times New Roman';
+	font-size: 16px;
+}
+#productName{
+	border: 1px solid #207245;
+	width:200px;
+	font-family: 'Times New Roman';
+
+}
+/* Searchuser and cart */
+.container-search-user-cart {
+    width: 15%;
+    margin: 5px 1.5%; 
+    display: inline-block;
+    text-align: center;   
+}
+.container-search-user-cart > * {
+    color: rgba(255,255,255,.5);
+    font-size: 140%;
+    margin: 5px 5%;
+}
+#menuSearch {
+    display: none;
+	background-color: rgba(240,244,241, 1.0);
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 60%; /* Full width (cover the whole page) */
+    height: 85%; /* Full height (cover the whole page) */
+    top: 0; 
+	 margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F0F4F1; /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+.CloseWindow{
+	color: #A4A393;
+	padding-left: 90px;
+	margin-left: 70px;
+	font-family: 'Times New Roman';
+}
+
+
+/* Buttons in Farmer's account */
+#btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated{
+	background: none;
+	border:  4px solid #558F6E;
+	color: #558F6E;
+	font-size: 16px;
+  font-family: "Playfair Display", serif;
+	 border-radius: 4px;
+	margin-right: 70px;
+	
+	
+}
+#btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated{
+	background: none;
+	border:  4px solid #558F6E;
+	color: #558F6E;
+	font-size: 16px;
+  font-family: "Playfair Display", serif;
+	 border-radius: 4px;
+	margin-right: 70px;
+	
+	
+}
+
+#btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated
+ #btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:before {
+    display: none; }
+
+#btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated
+ #btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:before {
+    display: none; }
+
+
+
+ #btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:hover, btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:focus, #btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:active {
+      border-color: #558F6E;
+      background: #558F6E;
+	color: white;
+}
+
+#btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:hover, btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:focus, #btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:active {
+      border-color: #558F6E;
+      background: #558F6E;
+	color: white;
+}
+/* link to MyProducts(Farmers account)*/
+.right{
+	display: block;	
+margin-right: 20px;
+}
+
+.right #lnkMyProducts{
+	font-size: 180%;
+	padding-top: 0px;
+text-shadow: 	6px 6px 8px #818C8B;
+	
+}
+
+.right #lnkMyProducts a{
+	color: #207245;
+}
+.variableforSorting{
+		color: azure;
+	
+
+}
+.variableforSorting:hover{
+		color: white;
+		text-underline-position: below;
+
+}
+.dropdown-menu li{
+	text-align: center;
+	font-family: bolder;
+}
+
+
+.dropdown-menu{
+	background-color: #207245;
+}
+/* Search in Farmer's account */
+
+#menuSearchOfProducts{
+	display: block;
+	margin-top: 10px;
+	height: 190%;
+	width: 100px;
+	margin-right: 30px;
+
+}
+#menuSearchOfProducts  input{
+	border: 1px solid #207245;
+	    font-size: 180%;
+	 border-radius: 4px;
+	
+}
+
+ 
