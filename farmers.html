@@ -58,8 +58,8 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="#section-home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#section-offer" class="nav-link">Farmers</a></li>
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="farmers.html" class="nav-link">Farmers</a></li>
             <li class="nav-item"><a href="#section-menu" class="nav-link">Produce</a></li>
             <li class="nav-item"><a href="#section-news" class="nav-link">Featured</a></li>
             <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
@@ -85,184 +85,222 @@
       </div><!-- END container-search-user-cart -->
     </nav>
     <!-- END nav -->
-	 <div class="float-right right">
-			 <p id="lnkMyProducts" ><a href="farmers.html">My Products</a></p> 
+
+    <!-- Julia's and Joseph's work. -->
+	  <div class="col-md-12 text-right">
+			 <p id="lnkMyProducts" ><a href="farmers.html">My Produce</a></p> 
 		 
-		 <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a class="variableforSorting" href="sortingByName">Name</a></li>
-      <li><a class="variableforSorting" href="sortingByDate">Date</a></li>
-	 <li><a class="variableforSorting" href="sortingByPrice">Price</a></li>
-     
-    </ul>
-  </div>
-</div>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="variableforSorting" href="sortingByName">Name</a></li>
+          <li><a class="variableforSorting" href="sortingByDate">Date</a></li>
+          <li><a class="variableforSorting" href="sortingByPrice">Price</a></li>       
+        </ul>
+      </div>
+    </div>
 		
-<section class="ftco-section" id="section-gallery">
-	<!--CreateProduce & CreatePackage buttons-->
-		  
-  <div class="container">	
-	  
-	
-	<div class="row ftco-custom-gutters">
-		 <p class="d-inline-block"><a id="btnCreateProducts" onclick="showCreateProduct()" target="_blank" class="btn btn-outline-white btn-lg ftco-animate" data-toggle="modal" data-target="#createNewProduct">Create new Produce</a></p><br>
-		 <p class="d-inline-block"><a id="btnCreatePackage" target="_blank" class="btn btn-outline-white btn-lg ftco-animate" data-toggle="modal" data-target="#createPackage">Create new Package</a></p>
-		
-           <div id="menuSearchOfProducts" class="d-inline-block">
-            <form data-ng-controller="" action=""  method="post" autocomplete="off">
-				
-              <input type="text" name="menuSearch" value="" placeholder="Search..." onfocus="this.value=''";>				
-            </form>
-			   
-              			  
+    <section class="ftco-section" id="section-gallery">
+      <!--CreateProduce & CreatePackage buttons-->		  
+      <div class="container">	
+        <div class="row ftco-custom-gutters">
+          <!-- Button -->
+          <div class="col-md-8 d-inline-block mx-1">
+            <p class="col-md-4 d-inline-block mx-1">
+              <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#createProduceModal">Create a new Produce</a>
+            </p>
+            <p class="col-md-4 d-inline-block mx-1">
+              <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#createPackageModal">Create a new Package</a>
+            </p>            
           </div>
-		
-		<div id="overlay">
-			<form id="CreateProduceForm">
-				<div id="floatLeft" >
-				<div class="uploader" onclick="$('#filePhoto').click()">
-					<p>Click here or drag here your<br>  Product images</p>
-					<img src=""/>
-				</div>
-				<input type="file" name="userprofile_picture"  id="filePhoto" />
-				</div>
-				
-				<p class="CloseWindow float-right" onclick="CloseWindow()" >Close</p><br>
-					<div id="floatRight">						
-				<label for="productName" >Name of a product:</label>
-					<input type="text" id="productName" ><br><br>
-					<textarea rows="4" cols="40" placeholder="Leave some descrption about product"></textarea> <br>
-						<div id="dropdownstoRight">
-					<div class="dropdownTypeOfProduct" id="dropproducType">				
-		 <button class="dropbtnType">Select Type</button>
-		 <div class="dropdown-contentType">
-			<a href="#vegetables">Vegetables</a>
-			 <a href="#fruits">Fruits</a>
-			 <a href="#bread">Cereal Products. Bread</a> 
-			  <a href="#legumes">Legumes</a> 
-			  <a href="#nuts_poppy">Nuts and Poppy</a> 
-			  <a href="#oils">Oils</a> 
-			  <a href="#musgrooms">Mushrooms</a> 
-			  <a href="#juice_honey">Fresh Juice/ Honey</a> 
-		 </div>
-	</div>&nbsp;
-			<div class="dropdownCategoryOfProduct" id="dropproducCategory">				
-		 <button class="dropbtnCategory">Select Category</button>
-		 <div class="dropdown-contentCategory">
-			<a href="#vegetables">Vegetables</a>
-			 <a href="#fruits">Fruits</a>
-			 <a href="#bread">Cereal Products. Bread</a> 
-			  <a href="#legumes">Legumes</a> 
-			  <a href="#nuts_poppy">Nuts and Poppy</a> 
-			  <a href="#oils">Oils</a> 
-			  <a href="#musgrooms">Mushrooms</a> 
-			  <a href="#juice_honey">Fresh Juice/ Honey</a> 
-		 </div>
-	</div>	
-			<p><br><label for="producequantity">Quantity:</label> <input type="text" name="producequantity" id="producequantity">
-				<label for="oneitemprice">Price per each item: </label> <input type="text" name="producequantity" id="oneitemprice" value="$ "><br><br>
-			</p>
-			<div id="pullrightTotal" class="float-right">
-				<p><label for="totalPrice">Total: </label><input type="number" name="producequantity" id="totalprice" value="$ ">	</p>	
-			</div>			
-							</div>
-						
-						<br><input type="submit" value="Submit" id="submitProductForm">
-		
-				</div>
-				
-			</form>
-			
-		</div>
-		
-			<!--link to MyProducts-->
-		
-	
-		
-	  <div class="col-md-12 text-center mb-5 ftco-animate">
-		 
-		
-		
-		<div class="row justify-content-center">
-		  <div class="col-md-7">
-			      
+          <!-- Search -->
+          <div id="farmerSearchOfProducts" class="col-md-3 d-inline-block m-1 text-center">
+            <form data-ng-controller="" action="" method="post" autocomplete="on">
+              <input type="text" name="farmerSearch" id="farmerSearch" placeholder="Search" />				
+            </form>                 
+          </div>
+        </div>
+
+        <!--link to MyProducts-->  
+        <div class="row ftco-custom-gutters mx-2">     
+          <!-- Add Div: data-ng-controller="" action="ManageProduct" -->
+          <div class="col-md-3 mx-1 my-4 text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line"/>
+            <div class="productForm">
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+      
+              <div class="mx-1 my-3">
+                <a href="#editProduct" >Edit Product</a> || 
+                <a href="#deleteProduct">Delete Product</a>  
+              </div>
+
+            </div>
+          </div><!-- END Procude 1 -->
+
+          <div class="col-md-3 mx-1 my-4 text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line"/>
+            <div class="productForm">
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+      
+              <div class="mx-1 my-3">
+                <a href="#editProduct" >Edit Product</a> || 
+                <a href="#deleteProduct">Delete Product</a>  
+              </div>
+
+            </div>
+          </div><!-- END Procude 2 -->
+
+          <div class="col-md-3 mx-1 my-4 text-center product">	
+              <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+              <hr class="line"/>
+              <div class="productForm">
+                <h3>
+                  Apple Green
+                  <span class="d-block my-2">$ 22.5</span>
+                </h3>
+                <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                  Not thoughts all exercise blessing. Indulgence way everything
+                  joy alteration boisterous the attachment. Party we years to order 
+                  allow asked of.
+                </p>			
+        
+                <div class="mx-1 my-3">
+                  <a href="#editProduct" >Edit Product</a> || 
+                  <a href="#deleteProduct">Delete Product</a>  
+                </div>
+  
+              </div>
+            </div><!-- END Procude 3 -->
+        </div>
+      </div>
+    </section>
+    <!-- END section --> 
+
+    <!-- createProduceModal: MODAL FORM -->
+    <div class="modal fade" id="createProduceModal" tabindex="-1" role="dialog" aria-labelledby="createProduceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="row">
+
+              <div class="col-lg-12 p-5">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
+                </button>
+                <h1 class="mb-4">Create a new Produce</h1>  
+                <form asp-controller="" asp-action="#" method="post">                 
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label class="" for="m_prodpicture">Upload your produce's pictures here (PNG, JPG)</label>
+                            <!-- *** Need a JS or .Net method to resize pictures -->
+                            <input type="file" class="form-control" id="m_prodpicture" accept="image/png, image/jpeg, image/jpg" multiple></input>
+                        </div>
+                    </div>		
+
+                    <!-- Only for produce -->
+                    <fieldset class="my-2">
+                      <legend>Produce Type</legend>
+                      <div class="row">
+                        <div class="col-md-6 form-group">
+                          <!-- Build list -->
+                          <label for="prodCat">[Load Produce Categories]:</label>
+                          <select name="select-pcat" id="prodCat" class="form-control" required>
+                            <option value=""></option>
+                            <option value="">Vegetables</option>
+                            <option value="">Fruits</option>
+                            <option value="">Meat</option>
+                          </select>
+                        </div>
+                     
+                        <div class="col-md-6 form-group">
+                          <!-- Build list -->
+                          <label for="prodType">[Load Type relative to the Category]:</label>
+                          <select name="select-ptype" id="prodType" class="form-control" required>
+                              <option value=""></option>
+                              <option value="">Tomatoes</option>
+                              <option value="">Apples</option>
+                              <option value="">Oranges</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 form-group">
+                          <!-- Build list -->
+                          <label for="prodProdType">[Load Produce Production Type]:</label>
+                          <select name="select-pptype" id="prodProdType" class="form-control" >
+                              <option value=""></option>
+                              <option value="">OGM</option>
+                              <option value="">Natural</option>
+                            </select>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!-- Generic fields: for produce and packs -->
+                    <fieldset class="my-2">
+                      <legend>Produce Type</legend>
+                      <div class="row">
+                        <div class="col-md-12 form-group">
+                          <label for="prodName">Name of a product:</label>
+                          <input type="text" id="prodName" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 form-group">
+                          <label for="prodQty">Quantity:</label>
+                          <input type="number" id="prodQty" class="form-control" required>
+                        </div>
+                      
+                        <div class="col-md-6 form-group">
+                          <label for="prodPrice">Price:</label>
+                          <input type="number" id="prodPrice" class="form-control text-right" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 form-group">
+                          <label for="m_fproddesc">Description</label>
+                          <textarea class="form-control" id="m_fproddesc" cols="40" rows="4"></textarea>
+                        </div>
+                      </div>
+                    </fieldset>
             
-			
-		  </div>
-		</div>
-	  </div>
-		
-	
-	  <div class="col-md-4  product"  onclick="showManageProduct()" >	
-	  <img class="ProductPhoto" src="images/menu_1.jpg" alt="Free Template by Free-Template.co">		
-		  	<div class="line"></div>
-		   <form class="ProductForm">
-		   <h3>Apple Green</h3>
-		   <input type="text" readonly value="$22.5">
-			<p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>			
-			
-		<div class="dropdownManageProduct" id="manageProduct">				
-		 <button class="dropbtn">Manage Product</button>
-		 <div class="dropdown-content">
-			<a href="#editProduct">Edit Product</a>
-			 <a href="#publishProduct">Publish Product</a>
-			 <a href="#deleteProduct">Delete Product</a>  
-		 </div>
-	 </div>
-</form>
-</div>
-		
-	  <div class="col-md-4 product" onclick="showManageProduct2()">
-		
-		  <img class="ProductPhoto" src="images/menu_2.jpg" alt="Free Template by Free-Template.co">
-			<div class="line"></div>
-		  <form class="ProductForm">
-			  <h3>Fresh Cucumbers</h3>
-		  <input type="text" readonly value="$22.5">
-			<p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-			
-			
-					<div class="dropdownManageProduct" id="manageProduct2">				
-				  <button class="dropbtn">Manage Product</button>
-				  <div class="dropdown-content">
-						<a href="#editProduct">Edit Product</a>
-					   <a href="#publishProduct">Publish Product</a>
-						<a href="#deleteProduct">Delete Product</a>  
-				  </div>
-			 </div>
-	</form>	 
-</div>
-	  <div class="col-md-4 product" onclick="showManageProduct3()">
-		
-		  <img class="ProductPhoto" src="images/menu_3.jpg" alt="Free Template by Free-Template.co">
-		  <div class="line"></div>
-		   <form class="ProductForm">
-			  <h3>Fresh Cucumbers</h3>
-		  <input type="text" readonly value="$22.5">
-			<p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-			
-			
-					<div class="dropdownManageProduct" id="manageProduct3">				
-				  <button class="dropbtn">Manage Product</button>
-				  <div class="dropdown-content">
-						<a href="#editProduct">Edit Product</a>
-					   <a href="#publishProduct">Publish Product</a>
-						<a href="#deleteProduct">Delete Product</a>  
-				  </div>
-			 </div>
-	</form>	 
-		
-	  </div>
+                    <!-- Submit or reset -->
+                    <div class="row">
+                      <div class="col-md-3 form-group">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create">
+                      </div>
+                    </div>
+                </form>             
+              </div>   
 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- createProduceModal: MODAL FORM -->
 
-	</div>
-  </div>
-</section>
-<!-- END section -->
-	  
-	  
+    
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
