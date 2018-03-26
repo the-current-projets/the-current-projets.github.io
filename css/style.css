@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5,
   font-family: "Playfair Display", serif; }
   .btn.btn-lg {
     font-size: 16px !important;
-    padding: 13px 40px !important; }
+    padding: 13px 40px; }
   .btn.btn-sm {
     padding: 10px 20px;
     font-size: 12px; }
@@ -265,8 +265,8 @@ h1, h2, h3, h4, h5,
     border-color: #207245;
     color: #fff; }
     .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
-      border-color: #c65700;
-      background: #c65700; }
+      border-color: #3B574A;
+      background: #3B574A; }
   .btn.btn-outline-white {
     border-color: rgba(255, 255, 255, 0.8);
     background: none;
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5,
 .form-control {
   border: 2px solid rgba(0, 0, 0, 0.2);
   /*height: 55px!important;*/
-  padding: .2rem .4rem;
+  padding: .2rem .4rem!important;
   background: #fff !important;
   color: #000 !important;
   font-size: 18px;
@@ -372,7 +372,7 @@ textarea.form-control {
   padding: 12em 0; }
 
 .ftco-section {
-  padding: 7em 0; }
+  padding: 2em 0; }
 
 .ftco-bg-dark {
   background: #207245; }
