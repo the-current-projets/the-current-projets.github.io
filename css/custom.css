@@ -131,7 +131,7 @@ h3 {
 /* link to MyProducts(Farmers account)*/
 #lnkMyProducts {
 	font-size: 130%;
-	margin: 1em 2%;
+	padding: .5em 2%;
     text-shadow: 4px 4px 8px #818C8B;
 }
 #lnkMyProducts a{
