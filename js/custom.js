@@ -74,6 +74,7 @@ $(document).ready( function(e) {
 });
 
 /* Julia's work: */
+/*
 function CloseWindow(){
  document.getElementById("overlay").style.display = "none";
 }
@@ -95,10 +96,10 @@ function showCreateProduct(){
 	
 	 document.getElementById("overlay").style.display = "block";
 }
-
+*/
 
 /* function or drag and drop */
-
+/*
 var imageLoader = document.getElementById('filePhoto');
     imageLoader.addEventListener('change', handleImage, false);
 
@@ -138,3 +139,4 @@ function drop(e) {
   //this code line fires your 'handleImage' function (imageLoader change event)
   imageLoader.files = files;
 }
+*/
