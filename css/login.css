@@ -32,6 +32,29 @@ body {
 .login-logo > * {
     margin: .5em 1%;
 }
+.oauth .logo-oauth {
+    padding: .25em 1%;
+    margin: .25em 1%;
+    display: inline-block;
+    text-align: center;
+    background-color: #F0F4F1;
+}
+.oauth i {
+    font-size: 200%;
+}
+#facebook-oauth {
+    color: #3C5A98;    
+}
+#google-oauth {
+    color: #3780FF;
+}
+#facebook-oauth:hover i {
+    color: #4862A3;    
+}
+#google-oauth:hover i {
+    color: #5A95F5;
+}
+
 #loginsubmit:hover, #loginsubmit:focus {
     background-color: #558F6E;
 }
