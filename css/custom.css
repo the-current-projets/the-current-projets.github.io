@@ -87,7 +87,16 @@ body {
     display: none;
 }
 
-
+/* Buyer */
+.default-address {
+    border-radius: 5px;
+    border: 1px solid #3B574A;
+    background-color: #558F6E;
+    color: #F0F4F1;
+}
+.a-address-fields {
+    display: none;
+}
 
 /********** Julia's work: **********/
 

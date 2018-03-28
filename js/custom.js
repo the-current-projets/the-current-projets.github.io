@@ -70,20 +70,43 @@ $(document).ready( function(e) {
         }
     });
 
-    /* Show farmer and farm address fields when different */
-    $('#farm_as_farmer').on('change', function () {
-
-        switch(this.checked) {
-            case true:  //farmer and farm address are the same
-                jQuery('.farm-address').slideToggle( function() {
-                    this.style.display = 'none';
-                });
-                break;
-            case false: //both are different
-                jQuery('.farm-address').slideToggle( function() {
-                    this.style.display = 'block';
-                });
-                break;
+    /* Manage the display of address fields if required by the user.
+       Used for CreateUser form and Shipping cart form
+    */
+    $('#farm_as_farmer, #another_address').on('change', function () {
+        if (this.id == 'farm_as_farmer') {
+            switch(this.checked) {
+                case true:  //farmer and farm address are the same
+                    jQuery('.farm-address').slideToggle( function() {
+                        this.style.display = 'none';
+                    });
+                    break;
+                case false: //both are different
+                    jQuery('.farm-address').slideToggle( function() {
+                        this.style.display = 'block';
+                    });
+                    break;
+            }
+        }
+        else if (this.id == 'another_address') {
+            switch(this.checked) {
+                case true:  //another shipping address
+                    jQuery('.a-address-fields').slideToggle( function() {
+                        this.style.display = 'block';
+                    });
+                    jQuery('.default-address > div').slideToggle( function() {
+                        this.style.display = 'none';
+                    });
+                    break;
+                case false: //not another shipping address, use default user address
+                    jQuery('.a-address-fields').slideToggle( function() {
+                        this.style.display = 'none';
+                    });
+                    jQuery('.default-address > div').slideToggle( function() {
+                        this.style.display = 'block';
+                    });
+                    break;
+            }
         }
     });
 
