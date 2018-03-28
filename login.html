@@ -25,7 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuW_Vur6YjDppRXkKHfPesWJodQG7_Wog&libraries=places&callback=initAutocomplete" async defer></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
     <script type="text/javascript" src="js/custom.js"></script>
     <script src="js/main.js"></script>
     <script src="js/google-map.js"></script> 
@@ -89,17 +90,16 @@
                 <div class="col-sm-12 oauth">
                     <div>Login with:</div>
                     <a id="facebook-oauth" href="https://www.facebook.com/">
-                        <div class="col-sm-3 logo-oauth">  
+                        <div class=" logo-oauth">  
                             <i class="fab fa-facebook-square" title="Facebook"></i>
                         </div>
                     </a>
 
-                    <!--
-                    <a id="google-oauth" href="https://accounts.google.com/ServiceLogin/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.ca%2F%3Fgfe_rd%3Dcr%26dcr%3D0%26ei%3DUdK5WtXAK4jPXt_NkOAG&flowName=GlifWebSignIn&flowEntry=AddSession">
-                        <div class="col-sm-3 logo-oauth">
+                    <a id="google-oauth" class="d-none" href="https://accounts.google.com/ServiceLogin/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.ca%2F%3Fgfe_rd%3Dcr%26dcr%3D0%26ei%3DUdK5WtXAK4jPXt_NkOAG&flowName=GlifWebSignIn&flowEntry=AddSession">
+                        <div class="logo-oauth">
                             <i class="fab fa-google" title="Google"></i>
                         </div>
-                    </a>-->
+                    </a>
                 </div>
             </div><!-- END oauth login Button -->
 
@@ -125,11 +125,11 @@
                         </div>                        
                     </div>
 
-                    <div class="row">
-                        <div class="col-sm-6 text-left">
+                    <div class="row login-links">
+                        <div class="text-left">
                             <a href="#" id="forgot-password">Forgot Password?</a>
                         </div>
-                        <div class="col-sm-6 text-right">
+                        <div class="text-right">
                             <!--<a href="#" id="create-account">Create account</a>-->
                             <a href="#" id="create-account" target="_blank" class="ftco-animate" data-toggle="modal" data-target="#createUserModal">Create account</a>
                         </div>
@@ -164,82 +164,184 @@
                     <!-- Specific fields for Farmer to create a farm first -->
                     <fieldset class="my-2 form-farm-fields">
                         <legend>Farm Information</legend>
+                        <!-- Address -->
+                        <!-- Note: Use Google maps API, Autocomplete for Addresses and Search:
+                            https://developers.google.com/maps/documentation/javascript/places-autocomplete#address_forms
+                            https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+                        -->
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_fname">Farm Name</label>
-                            <input type="text" class="form-control" id="m_fname"></input>
+                            <div class="col-md-12 form-group">
+                                <input type="checkbox" id="farm_as_farmer" checked></input>
+                                <label for="farm_as_farmer">Farm address same as Farmer address</label>
+                            </div>
                         </div>
+                        <div class="farm-address">
+                            <div class="row">
+                                <div class="col-md-12 form-group" id="farmlocationField">
+                                    <input type="text" id="autocompleteFarm" placeholder="Enter your address"
+                                        onFocus="geolocate()" class="form-control"></input>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col-md-2 form-group">
+                                    <!-- <label for="appart_number">Appartment</label> -->
+                                    <input type="text" class="field form-control" id="appart_number_farm" placeholder="Appart" disabled="true"></input>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <!-- <label for="street_number">Number</label> -->
+                                    <input type="number" class="field form-control" id="street_number_farm" placeholder="Number" disabled="true" required></input>
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <!-- <label for="route">Street name</label> -->
+                                    <input class="field form-control" id="route_farm" disabled="true" placeholder="Street name" required></input></td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <!-- <label for="locality">City</label> -->
+                                    <input type="number" class="field form-control" id="locality_farm" placeholder="City" disabled="true" required></input>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <!-- <label for="administrative_area_level_1">Province</label> -->
+                                    <input class="field form-control" id="administrative_area_level_1_farm" placeholder="Province" disabled="true" required></input></td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 form-group">
+                                    <!-- <label for="postal_code">Postal code</label> -->
+                                    <input type="number" class="field form-control" id="postal_code_farm" placeholder="Postal code" disabled="true" required></input>
+                                </div>
+                                <div class="col-md-9 form-group">
+                                    <!-- <label for="country">Country</label> -->
+                                    <input class="field form-control" id="country" disabled="true" placeholder="Country" required></input></td>
+                                </div>
+                            </div>
+                        </div><!-- END Farm Address -->
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="m_fname">Farm Name</label>
+                                <input type="text" class="form-control" id="m_fname"></input>
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_fheadline">Head Line</label>
-                            <input type="text" class="form-control" id="m_fheadline"></input>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_fheadline">Head Line</label>
+                                <input type="text" class="form-control" id="m_fheadline"></input>
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_fdescription">Description</label>
-                            <textarea class="form-control" id="m_fdescription" cols="40" rows="5"></textarea>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_fdescription">Description</label>
+                                <textarea class="form-control" id="m_fdescription" cols="40" rows="5"></textarea>
+                            </div>
                         </div>
                         <!-- Add farm Picture -->
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_fpicture">Upload Farm Picture (PNG, JPG)</label>
-                            <input type="file" class="form-control" id="m_fpicture" accept="image/png, image/jpeg, image/jpg"></input>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_fpicture">Upload Farm Picture (PNG, JPG)</label>
+                                <input type="file" class="form-control" id="m_fpicture" accept="image/png, image/jpeg, image/jpg"></input>
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-6 d-inline-block mx-auto form-group" id="m_fpicture_img">
-                            <img src="//:0" alt="Uploaded farm picture">
-                        </div>
+                            <div class="col-md-6 d-inline-block mx-auto form-group" id="m_fpicture_img">
+                                <img src="//:0" alt="Uploaded farm picture">
+                            </div>
                         </div>
                     </fieldset>
     
                     <fieldset class="my-2">
                         <legend>General Information</legend>
+                        <!-- Address -->
+                        <!-- Note: Use Google maps API, Autocomplete for Addresses and Search:
+                            https://developers.google.com/maps/documentation/javascript/places-autocomplete#address_forms
+                            https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+                        -->
+                        <div class="row">
+                            <div class="col-md-12 form-group" id="locationField">
+                                <input type="text" id="autocomplete" placeholder="Enter your address"
+                                    onFocus="geolocate()" class="form-control"></input>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-2 form-group">
+                                <!-- <label for="appart_number">Appartment</label> -->
+                                <input type="text" class="field form-control" id="appart_number" placeholder="Appart" disabled="true"></input>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <!-- <label for="street_number">Number</label> -->
+                                <input type="number" class="field form-control" id="street_number" placeholder="Number" disabled="true" required></input>
+                            </div>
+                            <div class="col-md-8 form-group">
+                                <!-- <label for="route">Street name</label> -->
+                                <input class="field form-control" id="route" disabled="true" placeholder="Street name" required></input></td>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <!-- <label for="locality">City</label> -->
+                                <input type="number" class="field form-control" id="locality" placeholder="City" disabled="true" required></input>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <!-- <label for="administrative_area_level_1">Province</label> -->
+                                <input class="field form-control" id="administrative_area_level_1" placeholder="Province" disabled="true" required></input></td>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 form-group">
+                                <!-- <label for="postal_code">Postal code</label> -->
+                                <input type="number" class="field form-control" id="postal_code" placeholder="Postal code" disabled="true" required></input>
+                            </div>
+                            <div class="col-md-9 form-group">
+                                <!-- <label for="country">Country</label> -->
+                                <input class="field form-control" id="country" disabled="true" placeholder="Country" required></input></td>
+                            </div>
+                        </div><!-- END Farmer Address -->
+
                         <!-- Name -->
                         <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label for="m_fname">First Name</label>
-                            <input type="text" class="form-control" id="m_fname" required>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="m_lname">Last Name</label>
-                            <input type="text" class="form-control" id="m_lname" required>
-                        </div>
+                            <div class="col-md-6 form-group">
+                                <label for="m_fname">First Name</label>
+                                <input type="text" class="form-control" id="m_fname" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="m_lname">Last Name</label>
+                                <input type="text" class="form-control" id="m_lname" required>
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label for="m_mname">Middle Name</label>
-                            <input type="text" class="form-control" id="m_mname">
-                        </div>
+                            <div class="col-md-6 form-group">
+                                <label for="m_mname">Middle Name</label>
+                                <input type="text" class="form-control" id="m_mname">
+                            </div>
                         </div>
                         <!-- Email -->
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_email">Email</label>
-                            <input type="email" class="form-control" id="m_email" required>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_email">Email</label>
+                                <input type="email" class="form-control" id="m_email" required>
+                            </div>
                         </div>
                         <!-- Phone -->
                         <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label for="m_phone">Phone</label>
-                            <input type="text" class="form-control" id="m_phone">
-                        </div>
+                            <div class="col-md-6 form-group">
+                                <label for="m_phone">Phone</label>
+                                <input type="text" class="form-control" id="m_phone">
+                            </div>
                         </div>
                         <!-- Add Picture -->
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_upicture">Upload Your Picture (PNG, JPG)</label>
-                            <input type="file" class="form-control" id="m_upicture" accept="image/png, image/jpeg, image/jpg"></input>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_upicture">Upload Your Picture (PNG, JPG)</label>
+                                <input type="file" class="form-control" id="m_upicture" accept="image/png, image/jpeg, image/jpg"></input>
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-6 d-inline-block mx-auto form-group" id="m_upicture_img">
-                            <img src="//:0" alt="Uploaded picture">
-                        </div>
+                            <div class="col-md-6 d-inline-block mx-auto form-group" id="m_upicture_img">
+                                <img src="//:0" alt="Uploaded picture">
+                            </div>
                         </div>
                     </fieldset>
     
@@ -247,23 +349,23 @@
                     <fieldset class="my-2 form-farm-fields">
                         <legend>Specific Information</legend>
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_position">Position Name</label>
-                            <input type="text" class="form-control" id="m_position"></input>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_position">Position Name</label>
+                                <input type="text" class="form-control" id="m_position"></input>
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="m_website">Web Site URL</label>
-                            <input type="url" class="form-control" id="m_website"></input>
-                        </div>
+                            <div class="col-md-12 form-group">
+                                <label for="m_website">Web Site URL</label>
+                                <input type="url" class="form-control" id="m_website"></input>
+                            </div>
                         </div>
                     </fieldset>
                     
                     <!-- Submit or reset -->
                     <div class="row">
                         <div class="col-md-6 form-group">
-                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create user">
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create user">
                         </div>
                         <div class="col-md-6 form-group">
                             <input type="reset" class="btn btn-primary btn-lg btn-block" value="Reset">

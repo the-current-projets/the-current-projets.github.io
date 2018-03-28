@@ -10,7 +10,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 #section-login {
     min-width: 290px;
     width: 320px;
@@ -65,3 +64,9 @@ body {
 #create-account:focus, #forgot-password:focus {
     color: #99CCFF; 
 }
+.login-links > div {
+    width: 40%;
+    margin: .25em 5%
+}
+
+

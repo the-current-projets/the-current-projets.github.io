@@ -70,73 +70,91 @@ $(document).ready( function(e) {
         }
     });
 
+    /* Show farmer and farm address fields when different */
+    $('#farm_as_farmer').on('change', function () {
+
+        switch(this.checked) {
+            case true:  //farmer and farm address are the same
+                jQuery('.farm-address').slideToggle( function() {
+                    this.style.display = 'none';
+                });
+                break;
+            case false: //both are different
+                jQuery('.farm-address').slideToggle( function() {
+                    this.style.display = 'block';
+                });
+                break;
+        }
+    });
 
 });
 
-/* Julia's work: */
-/*
-function CloseWindow(){
- document.getElementById("overlay").style.display = "none";
+/****************************************** *****************************************/
+// This code displays an address form, using the autocomplete feature
+// of the Google Places API to help users fill in the information.
+// It requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+/****************************************** *****************************************/
+var placeSearch, autocomplete;
+var componentForm = {
+    street_number: 'short_name',
+    route: 'long_name',
+    locality: 'long_name',
+    administrative_area_level_1: 'short_name',
+    country: 'long_name',
+    postal_code: 'short_name'
+};
+
+function initAutocomplete() {
+    // Create the autocomplete object, restricting the search to geographical
+    // location types.
+    autocomplete = new google.maps.places.Autocomplete(
+        /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+        {types: ['geocode']});
+
+    // When the user selects an address from the dropdown, populate the address
+    // fields in the form.
+    autocomplete.addListener('place_changed', fillInAddress);
 }
 
-function showManageProduct(){
-		var dropdownlist = document.getElementById("manageProduct");
-	manageProduct.style.display="inline";
-}
-function showManageProduct2(){
-		var dropdownlist = document.getElementById("manageProduct2");
-	manageProduct2.style.display="inline";
-}
-function showManageProduct3(){
-		var dropdownlist = document.getElementById("manageProduct3");
-	manageProduct3.style.display="inline";
-}
+function fillInAddress() {
+    // Get the place details from the autocomplete object.
+    var place = autocomplete.getPlace();
 
-function showCreateProduct(){
-	
-	 document.getElementById("overlay").style.display = "block";
-}
-*/
-
-/* function or drag and drop */
-/*
-var imageLoader = document.getElementById('filePhoto');
-    imageLoader.addEventListener('change', handleImage, false);
-
-function handleImage(e) {
-    var reader = new FileReader();
-    reader.onload = function (event) {
-        $('#uploader img').attr('src',event.target.result);
+    for (var component in componentForm) {
+        document.getElementById(component).value = '';
+        document.getElementById(component).disabled = false;
     }
-    reader.readAsDataURL(e.target.files[0]);
-    
+
+    // Get each component of the address from the place details
+    // and fill the corresponding field on the form.
+    for (var i = 0; i < place.address_components.length; i++) {
+        var addressType = place.address_components[i].types[0];
+        if (componentForm[addressType]) {
+        var val = place.address_components[i][componentForm[addressType]];
+        document.getElementById(addressType).value = val;
+        }
+    }
 }
 
-var dropbox;
-dropbox = document.getElementById("uploader");
-dropbox.addEventListener("dragenter", dragenter, false);
-dropbox.addEventListener("dragover", dragover, false);
-dropbox.addEventListener("drop", drop, false);
-
-function dragenter(e) {
-  e.stopPropagation();
-  e.preventDefault();
+// Bias the autocomplete object to the user's geographical location,
+// as supplied by the browser's 'navigator.geolocation' object.
+function geolocate() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        var geolocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
+        var circle = new google.maps.Circle({
+            center: geolocation,
+            radius: position.coords.accuracy
+        });
+        autocomplete.setBounds(circle.getBounds());
+        });
+    }
 }
+/********************************END Google API *****************************************/
 
-function dragover(e) {
-  e.stopPropagation();
-  e.preventDefault();
-}
-
-function drop(e) {
-  e.stopPropagation();
-  e.preventDefault();
-  //you can check e's properties
-  //console.log(e);
-  var dt = e.dataTransfer();
-  var files = dt.files;
-  
-  //this code line fires your 'handleImage' function (imageLoader change event)
-  imageLoader.files = files;
-}
-*/
+/**** Julia's work: *****/
