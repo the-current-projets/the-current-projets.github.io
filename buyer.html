@@ -100,10 +100,10 @@
 
       <div class="container-search-user-cart">
           <i id="searchOption" class="fas fa-search" title="Search"></i>
-          <a href="#">
+          <a href="buyer.html">
             <i class="fas fa-user" title="User"></i>
           </a>
-          <a href="#">
+          <a href="buyer.html">
             <i class="fas fa-shopping-cart" title="Shopping cart"></i>
           </a>
 
@@ -123,25 +123,27 @@
             <div class="row ftco-custom-gutters mb-4">
                 <!-- User name -->
                 <div class="col-md-12">
-                    <p id="lnkMyProducts" class="col-md-6 d-inline-block"><a href="farmers.html">Joseph Kasumba</a></p> 
+                    <p id="lnkMyProducts" class="col-md-6 d-inline-block"><a href="buyer.html">Joseph Kasumba</a></p> 
                 </div>
                 
                 <!-- Button Options -->
                 <div class="col-md-12">
                     <p class="col-md-4 d-inline-block mx-1">
-                        <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#editUserInfo">Edit user information</a>
+                        <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#editUserInfoModal">Edit user information</a>
                     </p>
 
                     <p class="col-md-4 d-inline-block mx-1">
-                        <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#changePassword">Change Password</a>
+                        <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#changePasswordModal">Change Password</a>
                     </p> 
         
                     <p class="col-md-4 d-inline-block mx-1">
-                        <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#orderHistory">Order history</a>
+                        <a href="orderHistory.html" class="btnCreateProduce btn ftco-animate">Order history</a>
+                        <!--<a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#orderHistoryModal">Order history</a>-->
                     </p>    
                     
                     <p class="col-md-4 d-inline-block mx-1">
-                        <a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#evaluations">Evaluations</a>
+                        <a href="evaluations.html" class="btnCreateProduce btn ftco-animate">Evaluations</a>
+                        <!--<a href="#" target="_blank" class="btnCreateProduce btn ftco-animate" data-toggle="modal" data-target="#evaluationsModal">Evaluations</a>-->
                     </p> 
                 </div>            
 
@@ -164,14 +166,14 @@
                                 <td>9</td>
                                 <td>2.99</td>
                                 <td>26.91</td>
-                                <td><i class="fas fa-trash-alt" title="remove"></i></td>
+                                <td><i class="fas fa-trash-alt" title="Remove"></i></td>
                             </tr>
                             <tr>
                                 <td>Oranges</td>
                                 <td>9</td>
                                 <td>2.99</td>
                                 <td>26.91</td>
-                                <td><i class="fas fa-trash-alt" title="remove"></i></td>
+                                <td><i class="fas fa-trash-alt" title="Remove"></i></td>
                             </tr>
                         </tbody>           
                     </table>
@@ -269,10 +271,201 @@
             </div>
         </div>
 	</section>
-	
-	<!-- ********** RENDER CONTENT HERE ********** -->
-	
-	
+
+
+    <!-- **************** Modals ******************** -->
+    <!-- Modal editUserInfoModal -->
+    <div class="modal fade" id="editUserInfoModal" tabindex="-1" role="dialog" aria-labelledby="editUserInfoModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 p-5">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <small>CLOSE </small><span aria-hidden="true">&times;</span>
+                            </button>
+                            <h1 class="mb-4">Edit user information</h1> 
+                            <form asp-controller="" asp-action="#" method="post">  
+                                <fieldset class="my-2">
+                                    <legend>General Information</legend>
+                                    <!-- Address -->
+                                    <!-- Note: Use Google maps API, Autocomplete for Addresses and Search:
+                                        https://developers.google.com/maps/documentation/javascript/places-autocomplete#address_forms
+                                        https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+                                    -->
+                                    <div class="row">
+                                        <div class="col-md-12 form-group" id="locationField">
+                                            <input type="text" id="autocomplete" placeholder="Enter your address"
+                                                onFocus="geolocate()" class="form-control"></input>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="row">
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" class="field form-control" id="appart_number" placeholder="Appart" disabled="true"></input>
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <input type="number" class="field form-control" id="street_number" placeholder="Number" disabled="true" required></input>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <input class="field form-control" id="route" disabled="true" placeholder="Street name" required></input></td>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <input type="number" class="field form-control" id="locality" placeholder="City" disabled="true" required></input>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <input class="field form-control" id="administrative_area_level_1" placeholder="Province" disabled="true" required></input></td>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 form-group">
+                                            <input type="number" class="field form-control" id="postal_code" placeholder="Postal code" disabled="true" required></input>
+                                        </div>
+                                        <div class="col-md-9 form-group">
+                                            <input class="field form-control" id="country" disabled="true" placeholder="Country" required></input></td>
+                                        </div>
+                                    </div><!-- END Farmer Address -->
+            
+                                    <!-- Name -->
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="m_bfname">First Name</label>
+                                            <input type="text" class="form-control" id="m_bfname" required>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="m_blname">Last Name</label>
+                                            <input type="text" class="form-control" id="m_blname" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="m_bmname">Middle Name</label>
+                                            <input type="text" class="form-control" id="m_bmname">
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label for="m_bemail">Email</label>
+                                            <input type="email" class="form-control" id="m_bemail" required>
+                                        </div>
+                                    </div>
+                                    <!-- Phone -->
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="m_bphone">Phone</label>
+                                            <input type="text" class="form-control" id="m_bphone">
+                                        </div>
+                                    </div>
+                                    <!-- Add Picture -->
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label for="m_upicture">Upload Your Picture (PNG, JPG)</label>
+                                            <input type="file" class="form-control" id="m_upicture" accept="image/png, image/jpeg, image/jpg"></input>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 d-inline-block mx-auto form-group" id="m_upicture_img">
+                                            <img src="//:0" alt="Uploaded picture">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                
+                                <!-- Specific fields for Farmer or Buyer -->
+                                <!--
+                                <fieldset class="my-2 form-farm-fields">
+                                    <legend>Specific Information</legend>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label for="m_position">Position Name</label>
+                                            <input type="text" class="form-control" id="m_position"></input>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label for="m_website">Web Site URL</label>
+                                            <input type="url" class="form-control" id="m_website"></input>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                -->
+
+                                <!-- Submit or reset -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="reset" class="btn btn-primary btn-lg btn-block" value="Reset">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END editUserInfoModal -->
+    
+    <!-- Modal changePasswordModal: May not be useful for buyer because of oAUTH facebook -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="changePasswordModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 p-5">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <small>CLOSE </small><span aria-hidden="true">&times;</span>
+                            </button>
+                            <h1 class="mb-4">Change password</h1> 
+                            <form asp-controller="" asp-action="#" method="post">  
+                                <!-- Authentication -->               
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="m_uemail">Email</label>
+                                        <input type="email" class="form-control" id="m_uemail" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="m_old_upassword">Current password</label>
+                                        <input type="password" class="form-control" id="m_old_upassword" required>
+                                    </div>
+                                </div>
+
+                                <!-- New Password -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="m_new_upassword">New password</label>
+                                        <input type="email" class="form-control" id="m_new_upassword" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="m_rnew_upassword">Retype new password</label>
+                                        <input type="password" class="form-control" id="m_rnew_upassword" required>
+                                    </div>
+                                    <div></div>
+                                </div>
+
+                                <!-- Submit or reset -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="reset" class="btn btn-primary btn-lg btn-block" value="Reset">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END changePasswordModal -->
+
+    <!-- **************** END Modals ******************** -->
+		
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
