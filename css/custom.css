@@ -125,9 +125,24 @@ body {
     width: 95%;
 	border: 1px solid #1A2720;
 }
+/* for farmer */
+.farmer {
+    font-family: "Times New Roman", serif;
+    border: 1px solid #818C8B;
+    box-shadow: 2px 2px 2px 2px #818C8B;
+	margin-right: 0;
+}
+
+.farmer > img.productPhoto {
+    min-width: 100px;
+    width: 95%;
+	border: 1px solid #1A2720;
+}
 .line {
     height: 1px;
     background-color: #207245; 
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 .ProductForm {
 	text-align: center;
@@ -141,7 +156,7 @@ h3 {
     font-size: 100%;
 }
 
-/* Button options in Farmer's account */
+/* Button options in Farmer's account - Julia */
 .btnCreateProduce {
 	background: none;
 	border: 1px solid #558F6E;
@@ -151,6 +166,35 @@ h3 {
     white-space: normal;                                                                                    
 }
 .btnCreateProduce:hover, .btnCreateProduce:focus, .btnCreateProduce:active {
+    border-color: #95BCA7;
+    background-color: #558F6E;
+	color: #fafafa;
+}
+
+.btnEditInfo{
+	background: none;
+	border: 1px solid #558F6E;
+	color: #558F6E;
+    border-radius: 4px;
+    padding: .5em 10%;
+    white-space: normal;
+}
+.btnEditInfo:hover, .btnCreateProduce:focus, .btnCreateProduce:active {
+    border-color: #95BCA7;
+    background-color: #558F6E;
+	color: #fafafa;
+}
+
+.btnAddToCart {
+	background: none;
+	width: 50%;
+	border: 1px solid #558F6E;
+	color: #558F6E;
+    border-radius: 4px;
+    padding: .5em 10%;
+    white-space: normal;                                                                                    
+}
+.btnAddToCart:hover, .btnAddToCart:focus, .btnAddToCart:active {
     border-color: #95BCA7;
     background-color: #558F6E;
 	color: #fafafa;
@@ -199,5 +243,397 @@ h3 {
     border-radius: 4px;	
     padding: .2em 2%;
 }
+/* search of farmers */
+#farmerSearchOfFarms {
+    height: 150%;   
+}
+#farmerSearchOfFarms input {
+	border: 1px solid #207245;
+    font-size: 120%;
+    text-align: left;
+    border-radius: 4px;	
+}
+/* select a Type of produce/farmers in the main(welcome) File for stranger user - Julia  */
+
+#main_File_dropproducType{
+	display: inline-block;
+	margin-left: 170px;
+	
+}
+.main_File_dropdownTypeOfProduct{
+	 
+	margin-top: 10px;
+	height: 190%;
+	width: 100px;
+	   
+	font-family: 'Times New Roman';
+	  
+	
+	
+	margin-left: 4.4%;
+	
+	
+	
+}
+
+.mainFile_dropdown-contentType{
+	 display: none;
+    position: absolute;
+    background-color: #207245;
+	color: white;
+    width: 14.2%;	
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;	
+	margin-left: 2.4%;
+
+}
+
+.mainFile_dropdown-contentType a{
+	    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.mainFile_dropdown-contentType a:hover {
+	background-color: #558F6E;
+	color: white;
+}
+
+.main_File_dropdownTypeOfProduct:hover .mainFile_dropdown-contentType {
+    display: block;
+}
+
+.main_File_dropdownTypeOfProduct:hover .mainFile_dropbtnType {
+    background-color: #558F6E;
+	color: white;
+}
+.mainFile_dropbtnType {
+	
+  font-size: 70%;
+   width: 180%;	
+   font-family: "Playfair Display", serif;	
+	background: none;
+    border: 1px solid #558F6E;
+    color: #558F6E;
+    
+    padding: .5em 10%;
+    white-space: normal;
+	margin-left: 30%;
+
+	
+}
+
+/* select a Category of produce/farmers in the main(welcome) File for stranger user  - Julia*/
+
+#main_File_dropproducCategory{
+	display: inline-block;
+	margin-left: auto;
+}
+.main_File_dropdownCategoryOfProduct{
+	 display: block;
+	margin-top: 10px;
+	height: 190%;
+	width: 100px;
+	   
+	font-family: 'Times New Roman';
+	  font-family: "Playfair Display", serif;
+	 
+	margin-right: 70px;
+	
+	
+	
+}
+
+.mainFile_dropdown-contentCategory{
+	 display: none;
+    position: absolute;
+    background-color: #207245;
+	color: white;
+   width: 14.25%;	
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;	
+	margin-left: 7.9%;
+	
+}
+
+.mainFile_dropdown-contentCategory a{
+	    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.mainFile_dropdown-contentCategory a:hover {
+	background-color: #558F6E;
+	color: white;
+}
+
+.main_File_dropdownCategoryOfProduct:hover .mainFile_dropdown-contentCategory {
+    display: block;
+}
+
+.main_File_dropdownCategoryOfProduct:hover .mainFile_dropbtnCategory {
+    background-color: #558F6E;
+	color: white;
+}
+.mainFile_dropbtnCategory {	 
+  font-size: 70%;
+   width: 180%;	
+   font-family: "Playfair Display", serif;	
+	background: none;
+    border: 1px solid #558F6E;
+    color: #558F6E;
+   
+    padding: .5em 10%;
+    white-space: normal;
+	margin-left: 100%;
+
+}
+#searchFarm{
+	height:70%;
+}
+/* Buttons in Farmer's account - Julia */
+#btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated{
+	background: none;
+	border:  4px solid #558F6E;
+	color: #558F6E;
+	font-size: 16px;
+  font-family: "Playfair Display", serif;
+	 border-radius: 4px;
+	margin-right: 70px;
+	
+	
+}
+#btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated{
+	background: none;
+	border:  4px solid #558F6E;
+	color: #558F6E;
+	font-size: 16px;
+  font-family: "Playfair Display", serif;
+	 border-radius: 4px;
+	margin-right: 70px;
+	
+	
+}
+
+#btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated
+ #btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:before {
+    display: none; }
+
+#btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated
+ #btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:before {
+    display: none; }
 
 
+
+ #btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:hover, btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:focus, #btnCreateProducts.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:active {
+      border-color: #558F6E;
+      background: #558F6E;
+	color: white;
+}
+
+#btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:hover, btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:focus, #btnCreatePackage.btn.btn-outline-white.btn-lg.ftco-animate.fadeInUp.ftco-animated:active {
+      border-color: #558F6E;
+      background: #558F6E;
+	color: white;
+}
+#menuSearchOfProducts{
+	display: block;
+	margin-top: 10px;
+	height: 190%;
+	width: 100px;
+	margin-right: 30px;
+
+}
+#mainFile_SearchOfProducts{
+	display: block;
+	margin-top: 10px;
+	height: 190%;
+	width: 100px;
+	margin-right: 30px;
+}
+#menuSearchOfProducts  input{
+	border: 1px solid #207245;
+	    
+	 
+	
+}
+
+
+.linkCSS a{
+	color:#A4A393;
+	font-family: 'Times New Roman';
+	font-size: 120%;
+}
+.linkCSS a:hover{
+	color:#207245;
+	font-family: 'Times New Roman';
+	font-size: 120%;
+}
+
+ /*  thumnails in farmers - Julia */
+.carousel{
+			text-align: center;
+		}
+		#bigpic{
+	width:350px;
+	height:300px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid black;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+			
+		}
+
+#bigpic2{
+	width:350px;
+	height:300px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid black;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+			
+		}
+
+#bigpic3{
+	width:350px;
+	height:300px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid black;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+			
+		}
+
+#bigpic:hover{
+	
+	box-shadow:3px 4px 19px 8px #C7DBD0;
+	
+}
+#bigpic2:hover{
+	
+	box-shadow:3px 4px 19px 8px #C7DBD0;
+	
+}
+#bigpic3:hover{
+	
+	box-shadow:3px 4px 19px 8px #C7DBD0;
+	
+}
+		.thumbs img{
+			margin-top: 5%;
+			height: 40px;
+		}
+
+
+/* button Add products to PAck - Julia */
+#btnAddtoPack{
+	margin-top: 10%;
+	margin-left: 15%;
+	background: none;
+    width: 50%;  
+    padding: 10px;
+	font-size: 80% !important;	
+	border:  4px solid #558F6E;
+	color: #558F6E;	
+    font-family: "Playfair Display", serif;
+	 
+
+}
+#btnAddtoPack:hover{
+	border-color: #558F6E;
+      background: #558F6E;
+	color: white;
+}
+/* anchor for additional options ( publish , delete, edit) of product of farmer's account/ farmers info - Julia */
+.anchorStyle{
+	color: #A4A393;
+}
+.anchorStyle:hover{
+	color: #207245;
+}
+
+/*button +/- quantity  to shoping cart - Julia */
+
+.count-input {
+  position: relative;
+  width: 100%;
+  max-width: 165px;
+  margin: 5% 20%;
+}
+.count-input input {
+  width: 100%;
+  height: 36.9px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background: none;
+  text-align: center;
+  color: #207245;
+  font-family: 'Oswald', sans-serif;
+  font-weight:bolder;
+}
+.count-input input:focus {
+  outline: none;
+}
+.count-input .incr-btn {
+  display: block;
+  color: #207245;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 26px;
+  font-weight:500;
+  text-align: center;
+  line-height: 30px;
+  top: 50%;
+  right: 0;
+  margin-top: -15px;
+  text-decoration:none;
+  
+}
+.count-input .incr-btn:first-child {
+  right: auto;
+  left: 0;
+  top: 46%;
+}
+.count-input.count-input-sm {
+  max-width: 125px;
+}
+.count-input.count-input-sm input {
+  height: 36px;
+}
+.count-input.count-input-lg {
+  max-width: 200px;
+}
+.count-input.count-input-lg input {
+  height: 70px;
+  border-radius: 3px;
+}
+
+/* customizing stars - Julia */
+#stars{
+	margin-top: 3%;
+	margin-left: 8%;
+	font-size: 150%;
+}
+.glyphicon {
+	color: #207245;
+}
+
+/* customizing dropdown list*Adding to pack * in CreatePackage  - Julia*/
+.dr_itemToPack{
+	width: 75%;
+	text-align: center;
+}
+/* checkbox for promotion in CreateProduce- Julia */
+#chboxProm{
+	float: left;
+    width: 5%;
+}
