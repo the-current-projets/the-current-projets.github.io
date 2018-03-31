@@ -65,6 +65,18 @@ body {
     color: #fff;
 }
 
+/* Table */
+.table td, .table th {
+    padding:.25em;
+}
+.btnTable {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.table tbody tr {
+    font-size: 100%;
+}
+
 /* Create User Modal */
 .create-user-left-side {
     background-color: #C7DBD0;
@@ -97,6 +109,8 @@ body {
 .a-address-fields {
     display: none;
 }
+
+
 
 /********** Julia's work: **********/
 
