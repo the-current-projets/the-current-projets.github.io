@@ -1,7 +1,7 @@
 <!-- **** FARMERS -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     <!-- 
     More Templates Visit ==> Free-Template.co
     -->
@@ -75,7 +75,7 @@
             <li class="nav-item"><a href="#section-offer" class="nav-link">Farmers</a></li>
             <li class="nav-item"><a href="#section-menu" class="nav-link">Produce</a></li>
             <li class="nav-item"><a href="#section-news" class="nav-link">Featured</a></li>
-            <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="manageUser.html" class="nav-link">Manage Users</a></li>
           </ul>
         </div>
       </div>
@@ -98,20 +98,58 @@
       </div><!-- END container-search-user-cart -->
     </nav>
     <!-- END nav -->
+	   
+		 
+    
+   
 	 
+	 	
+	  
 <section class="ftco-section" id="section-gallery">
 	<!--CreateProduce & CreatePackage buttons-->
 		  
-  <div class="container">	
-
+  <div class="container ">	
+	
 	<div class="row ftco-custom-gutters">
-		 <form data-ng-controller="" action=""  method="post" autocomplete="off">
+		 	 <div class="col-md-4 d-inline-block mx-1">           
+          <div id="farmerSearchOfFarms" class="col-md-3 inline-block m-1 text-center">
+            <form data-ng-controller="" action="" method="post" autocomplete="on">
+              <input type="text" name="farmerSearch" id="farmerSearch" placeholder="Search product" />				
+            </form>                 
+          </div>
+		</div>
+            
+		
+	<div class="col-md-2 d-inline-block mx-1">    
+		<div class="row">
+              <label for="totalOrers">Received: </label>
+		<input type="texts" id="receivedOrders" readonly value="1025 orders">
+         </div>
+		</div>
+	
+		
+  <div class="adminSort col-md-2 " id="adminSorting">
+        <button class="admin_sortingBtn " >Sort By</button>
+	   <div class="adminSort-contentType">
+        
+        <a  href="#sortingByName">Name</a>
+        <a  href="#sortingByDate">Date</a>
+        <a href="sortingByPrice">Price</a>      
+        
+      </div>
+				
+		
+		
+		 </div>
+	  </div>
+					
+		
 		
 		<fieldset id="FarmsInfo">
 			
 				 <legend >Anil's Farm</legend>
 			 
-			<div class="row">
+			<div class="row mt-7" >
 				<div class="carousel col-md-5">
 			  <a href="farmerXX.html">
 	  <img class="ProductPhoto" src="images/testFarmer1Picts/test01.jpg" id="bigpic" alt="Free Template by Free-Template.co"></a>
@@ -132,37 +170,49 @@
 				
 				</div>
 			</fieldset>
-			<div class="row ftco-custom-gutters mx-2">     
-          <!-- Add Div: data-ng-controller="" action="ManageProduct" -->
-          <div class="col-md-3 mx-1 my-4 text-center product">	
-            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
-            <hr class="line"/>
-            <div class="productForm">
-              <h3>
-                Apple Green
-                <span class="d-block my-2">$ 22.5</span>
-              </h3>				
-			<div class="count-input space-bottom">
-              <a class="incr-btn" data-action="decrease" href="#">–</a>
-              <input class="quantity" type="text" name="quantity" value="1"/>
-              <a class="incr-btn" data-action="increase" href="#">&plus;</a>
-              </div>				
-              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
-                Not thoughts all exercise blessing. Indulgence way everything
-                joy alteration boisterous the attachment. Party we years to order 
-                allow asked of.
-              </p>			
-      
-              <div class="mx-1 my-3 row">
-				<a class="btnAddToCart btn " href="#" >Add to Cart</a>
-                <div id="stars" class="starrr"></div> 
-               
-              </div>
+		
+			
+				<div class="col-md-12  clear d-inline-block mx-1">
+				<ul>
+		  <li class="col-md-1.9 d-inline-block drop "> 
+              <a href="farmerXXadmin.html"  class="p_admin down" >Produce</a>
+			    <div  class="dropdown-content_admin ">
+				  <a href="#Allprod_admin">Products</a>
+				  <a href="#Allpack_admin">Packages</a>			
+				</div>
+            </li>
+            <li class="col-md-2 d-inline-block  ">
+              <a href="farmerXXadmin_activeProd.html"  class="p_admin" >Active Products</a>
+				<div  class="dropdown-content_admin ">
+				  <a href="#prod_admin">Products</a>
+				  <a href="#pack_admin">Packages</a>			
+				</div>
+             </li>
+			<li class="col-md-2 d-inline-block  ">
+              <a href="#editInfo_admin"  class="p_admin" >Edit Information</a>
+             </li>
+			<li class="col-md-2 d-inline-block  ">
+              <a href="#orderHistory_admin"  class="p_admin" >Order History</a>
+            </li>
+			<li class="col-md-2 d-inline-block  ">
+              <a href="#feedback_admin"  class="p_admin">Feedback</a>
+            </li>
+			<li class="col-md-2 d-inline-block  ">
+              <a href="#actions_admin" class="p_admin">Actions</a>
+            </li>
+		</ul>
+			<div class="line"></div>
+		    </div>
+		
+	
 
-            </div>
-          </div><!-- END Procude 1 -->
+        
+	  
 
-          <div class="col-md-3 mx-1 my-4 text-center product">	
+        <section id="Allprod_admin">
+			 <h4>Products</h4>
+		<div class="row ftco-custom-gutters mx-2">    
+		<div class="col-md-3 mx-8 my-4 text-center product">	
             <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
             <hr class="line"/>
             <div class="productForm">
@@ -170,28 +220,64 @@
                 Apple Green
                 <span class="d-block my-2">$ 22.5</span>
               </h3>
-			  <div class="count-input space-bottom">
-				<a class="incr-btn" data-action="decrease" href="#">–</a>
-              	<input class="quantity" type="text" name="quantity" value="1"/>
-                <a class="incr-btn" data-action="increase" href="#">&plus;</a>
-              </div>
+		<div class="row ml-4  activeClass">
+			<h4 class="green" id="active">Active</h4>
+			<input type="checkbox" id="ActiveCheck" onchange="check()" value="1" checked>
+ 		</div>
+		<div class="row  activeClass">
+			<h4 class="green" id="promo">On Promotion</h4>
+			<input type="checkbox" id="promCheck" onchange="check()" value="1" checked>
+		</div>
               <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
                 Not thoughts all exercise blessing. Indulgence way everything
                 joy alteration boisterous the attachment. Party we years to order 
                 allow asked of.
               </p>			
       
-               <div class="mx-1 my-3 row">
-				<a class="btnAddToCart btn " href="#" >Add to Cart</a>
-                <div id="stars" class="starrr"></div> 
-               
-              </div>
+            
+			    <a class="anchorStyle" href="#editProduct" id="isPublished" >Unpublish </a> ||
+                <a  class="anchorStyle" href="#editProduct" >Edit </a> <br>
+			<div class="pull-right">
+				 <a class="anchorStyle" href="#editProduct" >Evaluations: </a> 
+				</div>
+				
 
+            </div>
+          </div><!-- END Procude 1 -->
+
+          <div class="col-md-3 mx-8 my-4 text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line"/>
+            <div class="productForm">
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>
+				<div class="row ml-4  activeClass">
+			<h4 class="green" id="active">Active</h4>
+			<input type="checkbox" id="ActiveCheck" onchange="check()" value="1" checked>
+ 		</div>
+		<div class="row  activeClass">
+			<h4 class="green" id="promo">On Promotion</h4>
+			<input type="checkbox" id="promCheck" value="1" onchange="check()" checked>
+		</div>
+              
+			  
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+       <a class="anchorStyle" href="#editProduct" id="isPublished" >Unpublish </a> ||
+                <a  class="anchorStyle" href="#editProduct" >Edit </a> <br>
+			<div class="pull-right">
+				 <a class="anchorStyle" href="#editProduct" >Evaluations: </a> 
+				</div>
 
             </div>
           </div><!-- END Procude 2 -->
 
-          <div class="col-md-3 mx-1 my-4 text-center product">	
+          <div class="col-md-3 mx-8 my-4 text-center product">	
               <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
               <hr class="line"/>
               <div class="productForm">
@@ -199,41 +285,158 @@
                   Apple Green
                   <span class="d-block my-2">$ 22.5</span>
                 </h3>
-				<div class="count-input space-bottom">
-					<a class="incr-btn" data-action="decrease" href="#">–</a>
-              		<input class="quantity" type="text" name="quantity" value="1"/>
-              		<a class="incr-btn" data-action="increase" href="#">&plus;</a>
-              </div>
+				  <div class="row ml-4  activeClass">
+			<h4 class="green" id="active">Active</h4>
+			<input type="checkbox" id="ActiveCheck" onchange="check()" value="1" checked>
+ 		</div>
+		<div class="row  activeClass">
+			<h4 class="green" id="promo">On Promotion</h4>
+			<input type="checkbox" id="promCheck" value="1" onchange="check()" checked>
+		</div>
+              
                 <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
                   Not thoughts all exercise blessing. Indulgence way everything
                   joy alteration boisterous the attachment. Party we years to order 
                   allow asked of.
                 </p>			
         
-                <div class="mx-1 my-3 row">
-				<a class="btnAddToCart btn " href="#" >Add to Cart</a>
-                <div id="stars" class="starrr"></div> 
-               
-              </div>
+                <a class="anchorStyle" href="#editProduct" id="isPublished" >Unpublish </a> ||
+                <a  class="anchorStyle" href="#editProduct" >Edit </a> <br>
+			<div class="pull-right">
+				 <a class="anchorStyle" href="#editProduct" >Evaluations: </a> 
+				</div>
 
   
               </div>
             </div><!-- END Procude 3 -->
+	  </div>
+	  </section>
 
+		<section id="Allpack_admin">
+	 
+
+       <h4>Packages</h4>
+		<div class="row ftco-custom-gutters mx-2"> 
+			
+		<div class="col-md-3 mx-8 my-4 text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line"/>
+			
+            <div class="productForm">
+				
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>
+		<div class="row ml-4  activeClass">
+			<h4 class="green" >Active</h4>
+			
+ 		</div>
+		<div class="row  activeClass">
+			<h4 class="green" id="promo1">On Promotion</h4>
+			<input type="checkbox" id="prom" value="1" onchange="check1()" checked>
+		</div>
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+      
+            
+			    <a class="anchorStyle" href="#editProduct" id="isPublished" >Unpublish </a> ||
+                <a  class="anchorStyle" href="#editProduct" >Edit </a> <br>
+			<div class="pull-right">
+				 <a class="anchorStyle" href="#editProduct" >Evaluations: </a> 
+				</div>
+			
+
+            </div>
+					
+          </div><!-- END Procude 1 -->
+
+          <div class="col-md-3 mx-8 my-4 text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line"/>
+            <div class="productForm">
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>
+				<div class="row ml-4  activeClass">
+			<h4 class="green" >Active</h4>
+			
+ 		</div>
+		<div class="row  activeClass">
+			<h4 class="green" id="promo1">On Promotion</h4>
+			<input type="checkbox" id="prom" value="1" onchange="check1()" checked>
+		</div>
+			  
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+      
+              <a class="anchorStyle" href="#editProduct" id="isPublished" >Unpublish </a> ||
+                <a  class="anchorStyle" href="#editProduct" >Edit </a> <br>
+			<div class="pull-right">
+				 <a class="anchorStyle" href="#editProduct" >Evaluations: </a> 
+				</div>
+
+
+            </div>
+          </div><!-- END Procude 2 -->
+
+          <div class="col-md-3 mx-8 my-4 text-center product">	
+              <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+              <hr class="line"/>
+              <div class="productForm">
+                <h3>
+                  Apple Green
+                  <span class="d-block my-2">$ 22.5</span>
+                </h3>
+				  <div class="row ml-4  activeClass">
+			<h4 class="green" >Active</h4>
+			
+ 		</div>
+		<div class="row  activeClass">
+			<h4 class="red" id="promo1">On Promotion</h4>
+			<input type="checkbox" id="prom" value="1" onchange="check1()" >
+		</div>
+				
+                <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                  Not thoughts all exercise blessing. Indulgence way everything
+                  joy alteration boisterous the attachment. Party we years to order 
+                  allow asked of.
+                </p>			
+         <a class="anchorStyle" href="#editProduct" id="isPublished" >Unpublish </a> ||
+                <a  class="anchorStyle" href="#editProduct" >Edit </a> <br>
+			<div class="pull-right">
+				 <a class="anchorStyle" href="#editProduct" >Evaluations: </a> 
+				  </div>
+               
+
+  
+              </div>
+            </div><!-- END Procude 3 -->
+			
+	  </div>
+					
+	  
+	  </section>
 			
 			 
 		
 		
-			 </div>
+
 		
-           
-		</form>
+      
 	</div>
-	</div>
-	  </section>
 <!-- END section -->
 	  
-	   <footer class="ftco-footer ftco-bg-dark ftco-section">
+	  </section>
+	  
+	  <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-8">
@@ -273,38 +476,12 @@
         <div class="row ftco-animate">
           <div class="col-md text-left">
             <p>&copy; [PlatformName] 2018. All Rights Reserved.  
-              <!--Made with <span class="icon-heart text-danger"></span>  by <a href="https://free-template.co/">Free-Template.co</a>-->
+              <!--Made with <span class="icon-heart text-danger"></span>  by <a href="#">Free-Template.co</a>-->
             </p>
           </div>
         </div>
       </div>
     </footer>
-
-    
-   
-
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    
-    <script src="js/jquery.animateNumber.min.js"></script>
-    
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-
-    <script src="js/main.js"></script>
 
     
   </body>

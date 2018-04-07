@@ -119,6 +119,8 @@ body {
     font-family: "Playfair Display", serif;
     border: 1px solid #818C8B;
     box-shadow: 2px 2px 2px 2px #818C8B;
+	margin-top: 6%;
+	margin-left: 6%;
 }
 .product > img.productPhoto {
     min-width: 100px;
@@ -214,6 +216,7 @@ h3 {
     border-bottom: 2px solid #818C8B;
 }
 .dropdown-menu {
+	width:10px!important;
 	background-color: #207245;
 }
 .dropdown-menu li {
@@ -225,7 +228,7 @@ h3 {
     background-color: #3B574A;
 }
 .variableforSorting {
-	color: #fafafa;
+	color: #fafafa;!important
 }
 .variableforSorting:hover {
     text-decoration: underline;
@@ -275,6 +278,65 @@ h3 {
 	
 	
 }
+/*admin-sortby */
+.adminSort{	 
+	margin-top: 10px;
+	height: 190%;
+	width: 40%;	   
+	font-family: 'Times New Roman';	
+	margin-left: 4.4%;	
+}
+
+#adminSorting{
+	display: block;	
+}
+.adminSort:hover .admin_sortingBtn {
+    background-color: #558F6E;
+	color: white;
+}
+.admin_sortingBtn {
+	
+  font-size: 70%;
+   width: 100%;	
+   font-family: "Playfair Display", serif;	
+	background: none;
+    border: 1px solid #558F6E;
+    color: #558F6E;
+    
+    padding: .5em 10%;
+    white-space: normal;
+	margin-left: 30%;
+
+	
+}
+.adminSort-contentType{
+	 display: none;
+    position: absolute;
+    background-color: #207245;
+	color: white;
+    width: 94.7%;	
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;	
+	margin-left: 28.4%;
+
+}
+
+.adminSort-contentType a{
+	    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.adminSort a:hover {
+	background-color: #558F6E;
+	color: white;
+}
+
+.adminSort:hover .adminSort-contentType {
+    display: block;
+}
+
 
 .mainFile_dropdown-contentType{
 	 display: none;
@@ -636,4 +698,89 @@ h3 {
 #chboxProm{
 	float: left;
     width: 5%;
+}
+
+/***** ADMIN DASHBOARD ***** */
+
+/* customizing searchbox for farm/farmer's id */
+#farmerSearch{
+	width: 200%;
+}
+ #farmerSearch placeholder{
+	padding: 5%;
+}
+/* received orders frm all sustem */
+#receivedOrders{
+	width: 50%;
+	text-align: left;
+	border: none;
+	padding-bottom: 10%;
+}
+#dropdownId  {
+	padding-top: 1%;
+}
+/* extra Admin Info */
+.extraAdminInfoLeft{
+	padding-left: 4%;
+}
+.extraAdminInfoRight{
+	float: right;
+}
+.variableforSortingAdmin{
+	color: #F0F4F1!important;
+}
+.clear{
+	clear:both;
+	margin-top:3%;
+	text-align:center;
+	
+}
+.p_admin{
+	font-size:100%;	
+	font-family: 'Oswald', sans-serif;
+	color:#207245!important;
+}
+
+li .drop{
+	display: inline-block;
+}
+
+.dropdown-content_admin {
+    display: none;
+    position: absolute;
+    background-color: #F0F4F1;
+    border: 1px solid #207245;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	margin-left: -2%;
+}
+
+.dropdown-content_admin a {
+    color: #207245;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+ .dropdown-content_admin a:hover {background-color: #A4A393;
+color: #F0F4F1;}
+
+.drop:hover .dropdown-content_admin{
+	display: block;
+}
+.green{
+	color: #207245;
+	
+	font-weight: bolder;
+	
+}
+.red{
+	color: indianred;
+	
+	font-weight: bolder;
+}
+.activeClass{
+	padding-left: 28%;
+	padding-left: 28%;
 }

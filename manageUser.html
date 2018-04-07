@@ -63,7 +63,7 @@
             <li class="nav-item"><a href="#section-offer" class="nav-link">Farmers</a></li>
             <li class="nav-item"><a href="#section-menu" class="nav-link">Produce</a></li>
             <li class="nav-item"><a href="#section-news" class="nav-link">Featured</a></li>
-            <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="manageUser.html" class="nav-link">Manage Users</a></li>
           </ul>
         </div>
       </div>
@@ -87,7 +87,20 @@
     </nav>
     <!-- END nav -->
 	 
-		
+<div class="col-md-12 text-right">
+			
+		 
+      <div class="dropdown" id="dropdownId">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="variableforSorting" href="sortingByName">Name</a></li>
+          <li><a class="variableforSorting" href="sortingByDate">Date</a></li>
+          <li><a class="variableforSorting" href="sortingByPrice">Price</a></li>       
+        </ul>
+      </div>
+</div>		
 <section class="ftco-section" id="section-gallery">
 	<!--CreateProduce & CreatePackage buttons-->
 		  
@@ -95,62 +108,23 @@
 
 	<div class="row ftco-custom-gutters">
 		 
-	
-           <div id="mainFile_menuSearchOfProducts" class="inline-block">
-			
-            <form data-ng-controller="" action=""  method="post" autocomplete="off">
-				
-				<div class="row">
-					
-             <div id="farmerSearchOfFarms" class="col-md-2 d-inline-block m-1 text-center">
+	 <div class="col-md-4 d-inline-block mx-1">           
+          <div id="farmerSearchOfFarms" class="col-md-3 inline-block m-1 text-center">
             <form data-ng-controller="" action="" method="post" autocomplete="on">
-              <input type="text" name="farmerSearch"  placeholder="Search" />				
+              <input type="text" name="farmerSearch" id="farmerSearch" placeholder="Search farm/ farmer's id" />				
             </form>                 
-          </div>				
-           
-			   
-			   <div class="main_File_dropdownCategoryOfProduct  inline-block" id="main_File_dropproducCategory">				
-		 <button class="mainFile_dropbtnCategory ">Select Category</button>
-		 <div class="mainFile_dropdown-contentCategory">
-				<a href="#vegetables">Vegetables</a>
-				 <a href="#fruits">Fruits</a>
-				 <a href="#bread">Cereal Products. Bread</a> 
-				  <a href="#legumes">Legumes</a> 
-				  <a href="#nuts_poppy">Nuts and Poppy</a> 
-				  <a href="#oils">Oils</a> 
-				  <a href="#musgrooms">Mushrooms</a> 
-				  <a href="#juice_honey">Fresh Juice/ Honey</a> 
-		 </div>
-	</div>
-				<!-- It is invisible because weh ave to choose firstly a category and only then it will show all types of 
-				that exact category -->
-				<div class="main_File_dropdownTypeOfProduct  inline-block" id="main_File_dropproducType">				
-		 <button class="mainFile_dropbtnType ">Select Type</button>
-		 <div class="mainFile_dropdown-contentType">
-				<a href="#vegetables">Vegetables</a>
-				 <a href="#fruits">Fruits</a>
-				 <a href="#bread">Cereal Products. Bread</a> 
-				  <a href="#legumes">Legumes</a> 
-				  <a href="#nuts_poppy">Nuts and Poppy</a> 
-				  <a href="#oils">Oils</a> 
-				  <a href="#musgrooms">Mushrooms</a> 
-				  <a href="#juice_honey">Fresh Juice/ Honey</a> 
-		 </div>
-					</div>
-										
-				</div>
-				</form>
-				
-              			  
           </div>
+		</div>
+            
 		
+	<div class="col-md-2 d-inline-block mx-1">    
+		<div class="row">
+              <label for="totalOrers">Received: </label>
+		<input type="texts" id="receivedOrders" readonly value="1025 orders">
+         </div>
+		</div>
 		
-		
-			<!--link to MyProducts-->
-		
-	
-		
-	  <div class="col-md-12 text-center mb-5 ftco-animate">
+		  <div class="col-md-12 text-center mb-5 ftco-animate">
 		 
 		
 		
@@ -184,7 +158,41 @@
 		   <form class="ProductForm">
 		   <h3>Joseph's Farm</h3>
 			  
-			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>	
+			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
+			 
+			   <table >
+			  <tr>
+				  <td class="extraAdminInfoLeft"><label for="totalProduce">Total produce: </label></td>
+				  <td class="extraAdminInfoRight" id="totalProduce">5</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="activeProducts">Active produce:</label></td>
+				  <td class="extraAdminInfoRight" id="activeProducts">4</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="activePacks">Active packs: </label></td>
+				  <td class="extraAdminInfoRight" id="activePacks">1</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="promos">Promotions: </label></td>
+				  <td class="extraAdminInfoRight" id="promos">1</td>			   
+			</tr>
+				   
+			 <tr>
+				  <td class="extraAdminInfoLeft"><label for="numOfOtherFarms">Other Farms: </label></td>
+				  <td class="extraAdminInfoRight" id="numOfOtherFarms">0</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"><label for="totalReceivedOrders">Total received orders: </label></td>
+				  <td class="extraAdminInfoRight" id="totalReceivedOrders">23</td>			   
+			</tr>
+			  
+			   
+			   </table>
+			   
+			   
+	  
+			   
 			   <div class="float-right linkCSS" >
 			  <a href="farmerXX.html">Go to products </a>
 				   </div>
@@ -214,7 +222,36 @@
 		   <form class="ProductForm">
 		   <h3>Ammy's Farm</h3>
 			  
-			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>	
+			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
+ 			 <table >
+			  <tr>
+				  <td class="extraAdminInfoLeft"><label for="totalProduce">Total produce: </label></td>
+				  <td class="extraAdminInfoRight" id="totalProduce">5</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="activeProducts">Active produce:</label></td>
+				  <td class="extraAdminInfoRight" id="activeProducts">4</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="activePacks">Active packs: </label></td>
+				  <td class="extraAdminInfoRight" id="activePacks">1</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="promos">Promotions: </label></td>
+				  <td class="extraAdminInfoRight" id="promos">1</td>			   
+			</tr>
+				   
+			 <tr>
+				  <td class="extraAdminInfoLeft"><label for="numOfOtherFarms">Other Farms: </label></td>
+				  <td class="extraAdminInfoRight" id="numOfOtherFarms">0</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"><label for="totalReceivedOrders">Total received orders: </label></td>
+				  <td class="extraAdminInfoRight" id="totalReceivedOrders">23</td>			   
+			</tr>
+			  
+			   
+			   </table>
 			   <div class="float-right linkCSS" >
 			  <a href="farmerXX.html">Go to products </a>
 				   </div>
@@ -244,7 +281,36 @@
 		   <form class="ProductForm">
 		   <h3>Yuliia's Farm</h3>
 			  
-			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>	
+			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
+			 <table >
+			  <tr>
+				  <td class="extraAdminInfoLeft"><label for="totalProduce">Total produce: </label></td>
+				  <td class="extraAdminInfoRight" id="totalProduce">5</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="activeProducts">Active produce:</label></td>
+				  <td class="extraAdminInfoRight" id="activeProducts">4</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="activePacks">Active packs: </label></td>
+				  <td class="extraAdminInfoRight" id="activePacks">1</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"> <label for="promos">Promotions: </label></td>
+				  <td class="extraAdminInfoRight" id="promos">1</td>			   
+			</tr>
+				   
+			 <tr>
+				  <td class="extraAdminInfoLeft"><label for="numOfOtherFarms">Other Farms: </label></td>
+				  <td class="extraAdminInfoRight" id="numOfOtherFarms">0</td>			   
+			</tr>
+		     <tr>
+				  <td class="extraAdminInfoLeft"><label for="totalReceivedOrders">Total received orders: </label></td>
+				  <td class="extraAdminInfoRight" id="totalReceivedOrders">23</td>			   
+			</tr>
+			  
+			   
+			   </table>
 			   <div class="float-right linkCSS" >
 			  <a href="farmerXX.html">Go to products </a>
 				   </div>
@@ -253,100 +319,30 @@
 </form>
 </div>	
 
-			  <div class="col-md-4  farmer"  >	
-		  <div class="carousel">
-			  <a href="farmerXX.html">
-	  <img class="ProductPhoto" src="images/testFarmer1Picts/test01.jpg" id="bigpic" alt="Free Template by Free-Template.co"></a>
-		  <div class="thumbs" >
-			<img src="images/LeftArrow.jpg" alt="Previous" onclick="calcside1(-1)">
-			<img src="images/testFarmer1Picts/test01.jpg" alt="Second" onclick="showbig(this.src)">
-			
-			<img src="images/testFarmer1Picts/test02.jpg" alt="" onclick="showbig1(this.src)">
-			<img src="images/testFarmer1Picts/test03.jpg" alt="" onclick="showbig1(this.src)">		
-			<img src="images/testFarmer1Picts/test04.jpg" alt="" onclick="showbig1(this.src)">		
-			<img src="images/RightArrow.jpg" alt="Next" onclick="calcside1(1)">
-			  </div>
-	</div>
-		
-		  	<div class="line"></div>
-		   <form class="ProductForm">
-		   <h3>Joseph's Farm</h3>
-			  
-			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>	
-			   <div class="float-right linkCSS" >
-			  <a href="farmerXX.html">Go to products </a>
-				   </div>
-			
-		
-</form>
-</div>
-		
-	  <div class="col-md-4 farmer">
-		
-		   
-		  <div class="carousel">
-			  <a href="farmerXX.html">
-	  <img class="ProductPhoto" src="images/testFarmer2Picts/test01.jpg" id="bigpic2" alt="Free Template by Free-Template.co"></a>
-		  <div class="thumbs" >
-			<img src="images/LeftArrow.jpg" alt="Previous" onclick="calcside2(-1)">
-			<img src="images/testFarmer2Picts/test01.jpg" alt="Second" onclick="showbig2(this.src)">
-			
-			<img src="images/testFarmer2Picts/test02.jpg" alt="" onclick="showbig2(this.src)">
-			<img src="images/testFarmer2Picts/test03.jpg" alt="" onclick="showbig2(this.src)">		
-			<img src="images/testFarmer2Picts/test04.jpg" alt="" onclick="showbig2(this.src)">		
-			<img src="images/RightArrow.jpg" alt="Next" onclick="calcside2(1)">
-			  </div>
-	</div>
-		
-		  	<div class="line"></div>
-		   <form class="ProductForm">
-		   <h3>Ammy's Farm</h3>
-			  
-			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>	
-			   <div class="float-right linkCSS" >
-			  <a href="farmerXX.html">Go to products </a>
-				   </div>
-			
-		
-</form>
-</div>	
-		
-		  <div class="col-md-4 farmer">
-		
-		   
-		  <div class="carousel">
-			  <a href="farmerXX.html">
-	  <img class="ProductPhoto" src="images/testFarmer3Picts/test01.jpg" id="bigpic3" alt="Free Template by Free-Template.co"></a>
-		  <div class="thumbs" >
-			<img src="images/LeftArrow.jpg" alt="Previous" onclick="calcside3(-1)">
-			<img src="images/testFarmer3Picts/test01.jpg" alt="Second" onclick="showbig3(this.src)">
-			
-			<img src="images/testFarmer3Picts/test02.jpg" alt="" onclick="showbig3(this.src)">
-			<img src="images/testFarmer3Picts/test03.jpg" alt="" onclick="showbig3(this.src)">		
-			<img src="images/testFarmer3Picts/test04.jpg" alt="" onclick="showbig3(this.src)">		
-			<img src="images/RightArrow.jpg" alt="Next" onclick="calcside3(1)">
-			  </div>
-	</div>
-		
-		  	<div class="line"></div>
-		   <form class="ProductForm">
-		   <h3>Yuliia's Farm</h3>
-			  
-			<p >Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>	
-			   <div class="float-right linkCSS" >
-			  <a href="farmerXX.html">Go to products </a>
-				   </div>
-			
-		
-</form>
+	 
 </div>	
 		
 
 	  
 
+	
+        
+           
+					
+             
+					
+			
+           
+			   
+			  
+				
+              			  
+         
+		
 
-	</div>
-  </div>
+		
+	  </div>
+	
 </section>
 <!-- END section -->
 	  

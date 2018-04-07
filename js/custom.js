@@ -464,4 +464,46 @@ function geolocate() {
                document.getElementById("bigpic").src = pic; // so it takes the picture's sourxe   and put in the div caleed "bigpic"
            }
    
-   
+   		/* function for checking checkboxes */
+		function check(){
+			var state_activ = document.getElementById("ActiveCheck");
+			var state_promo = document.getElementById("promCheck");	
+							
+			var changing1 = document.getElementById("active");
+			var changing2 = document.getElementById("promo");
+		
+			if (state_activ.checked == true){
+				
+				changing1.className="green";
+				document.getElementById("isPublished").textContent="Unpublish";
+			}
+			else{
+				changing1.className="red";
+				document.getElementById("isPublished").textContent="Publish";
+				
+			}
+			
+			if(state_promo.checked==true){
+				
+				changing2.className="green";
+			}
+			else{
+				changing2.className="red";
+			}
+			
+			
+			
+		}
+function check1(){
+
+var _promo = document.getElementById("prom");
+	var changing3 = document.getElementById("promo1");
+			
+
+if(_promo.checked == true){
+				changing3.className="green";
+			}
+			else{
+				changing3.className="red";
+			}
+}
