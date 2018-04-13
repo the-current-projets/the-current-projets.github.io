@@ -247,6 +247,17 @@ $(document).ready( function(e) {
                     $('#count-existing').html(value);
                     });
 
+		/* fucntion for Unpublish-Publish */
+	 $("a").click(function(){
+		 if(this.innerHTML =="Unpublish"){
+			 this.innerHTML= "Publish"
+		 }
+		 else if( this.innerHTML =="Publish"){
+			  this.innerHTML= "Unpublish"
+		 }
+    
+    });
+
                     });
 
 
