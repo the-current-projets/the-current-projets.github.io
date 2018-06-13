@@ -17,7 +17,7 @@
 	  appId            : '2174034705944677', //'124285848214697',
 	  autoLogAppEvents : true,
 	  xfbml            : true,
-	  version          : 'v2.10'
+	  version          : 'v3.0'
 	});
 	FB.AppEvents.logPageView();
   };
@@ -108,7 +108,7 @@ function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, o
 {
 	FB.ui({
 		method: 'share_open_graph',
-		action_type: 'og.shares',
+		action_type: 'og.likes',
 		action_properties: JSON.stringify({
 			object: {
 				'og:url': overrideLink,
