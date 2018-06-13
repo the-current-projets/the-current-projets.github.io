@@ -106,7 +106,7 @@ function submitAndShare()
  
 function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
 {
-	FB.ui({
+	/*FB.ui({
 		method: 'share_open_graph',
 		action_type: 'og.shares',
 		action_properties: JSON.stringify({
@@ -116,7 +116,15 @@ function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, o
 				'og:description': overrideDescription,
 				'og:image': overrideImage
 			}
-		})
+		})*/
+	FB.ui({
+		method: 'feed',
+		link: overrideLink,
+		picture: overrideImage,
+		caption: 'test og',
+		title:  overrideTitle,
+		description: overrideDescription,
+		message: 'test og message'
 	},
 	function (response) {
 	// Action after response
