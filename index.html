@@ -1,141 +1,308 @@
-<!doctype html>
-<html>
-<head>
-	<title>Are you the real StarTrek geek?</title>
-	<meta charset="utf-8">
-	<meta property="fb:app_id" content="2174034705944677" />
-	<meta property="og:url" content="https://the-current-projets.github.io/" >
-	<meta property="og:type" content="article" >
-	<meta property="og:title" content="Are you the real Star Trek geek?" >
-	<meta property="og:description" content="Prove your Star Trek geekhood! Are you wise like Yoda or Jar Jar Binks?" >
-	<meta property="og:image" content="https://github.com/the-current-projets/the-current-projets.github.io/blob/master/images/image2.jpg?raw=true" >
-	<meta property="og:image:width" content="1200" >
-	<meta property="og:image:height" content="630" >
-<script>
-  window.fbAsyncInit = function() {
-	FB.init({
-	  appId            : '2174034705944677', //'124285848214697',
-	  autoLogAppEvents : true,
-	  xfbml            : true,
-	  version          : 'v3.0'
-	});
-	FB.AppEvents.logPageView();
-  };
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+    More Templates Visit ==> Free-Template.co
+    -->
+    <title>[PlatformName]</title>
+    <!-- Icon must be changed, Ref from: https://pngtree.com/freepng/farm_733892.html -->
+    <link type="image/x-icon" rel="icon" href="images/icon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free Template by Free-Template.co" /> 
+    <meta name="keywords" content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="Free-Template.co" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery, Custom js, and Bootstrap js-->
+<!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/google-map.js"></script> 
+  -->
+
+    <!-- To remove if remote links works properly -->   
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/google-map.js"></script>
+    
+    <!-- To remove if remote links work properly -->
+
+    <!-- Google fonts, Bootstrap, Custom CSS -->
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" integrity="sha384-VY3F8aCQDLImi4L+tPX4XjtiJwXDwwyXNbkH7SHts0Jlo85t1R15MlXVBKLNx+dj" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.css" />
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animate.css">
+  -->
+    
+    <!-- To remove if remote links works properly -->
  
-  (function(d, s, id){
-	 var js, fjs = d.getElementsByTagName(s)[0];
-	 if (d.getElementById(id)) {return;}
-	 js = d.createElement(s); js.id = id;
-	 js.src = "//connect.facebook.net/en_US/sdk.js";
-	 fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-</head>
-<body>
- 
-<h1>Are you the real Star Trek geek?</h1>
-<p>
-Prove your Star Trek geekhood! Are you wise like Yoda or Jar Jar Binks?
-</p>
-<p>
-	<strong>
- This is FB js share demo. For full article please visit: &quot;<a href="http://drib.tech/programming/dynamically-change-facebook-open-graph-meta-data-javascript" target="_blank">Dynamically change Facebook open graph meta data with JavaScript</a>&quot; .
-	</strong>
-</p>
-<form action="#" method="post" id="star_trek_quiz">
-	<dl>
-		<dt>James T Kirk - What does the 'T' stand for?</dt>
-		<dd><label><input name="answer" type="radio" value="Thomas">Thomas</label></dd>
-		<dd><label><input name="answer" type="radio" value="Titus">Titus</label></dd>
-		<dd><label><input name="answer" type="radio" value="Tiberius">Tiberius</label></dd>
-		<dd><label><input name="answer" type="radio" value="Tarquin">Tarquin</label></dd>
-	</dl>
- 
-	<hr>
-	<input type="submit" value="Submit answer" onclick="return submitAndShare();">
-</form>
-<hr>
-<a href="#" onclick="return shareOriginal();">Share with original og:meta data</a>
+    <link rel="stylesheet" href="css/gfont-oswald.css">
+    <link rel="stylesheet" href="css/gfont-playfair.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">  
+    
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+  </head>
+  
+  <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark-custom ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- Logo must be changed, Ref from: https://pngtree.com/freepng/farm_733892.html -->
+          <img src="images/logo_transp.png" alt="Logo">
+          <span>[PlatformName]</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="farmers.html" class="nav-link">Farmers</a></li>
+            <li class="nav-item"><a href="farmerXX.html" class="nav-link">Produce</a></li>
+            <li class="nav-item"><a href="#section-news" class="nav-link">Featured</a></li>
+            <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-search-user-cart">
+          <i id="searchOption" class="fas fa-search" title="Search"></i>
+          <a href="buyer.html">
+            <i class="fas fa-user" title="User"></i>
+          </a>
+          <a href="buyer.html">
+            <i class="fas fa-shopping-cart" title="Shopping cart"></i>
+          </a>
+
+          <div id="menuSearch">
+            <form asp-controller="" asp-action=""  method="post" autocomplete="off">
+              <input type="text" name="menuSearch" value="" placeholder="Search">
+              <!--<button type="submit" name="submit">Search</button>-->
+            </form>
+          </div>
+      </div><!-- END container-search-user-cart -->
+    </nav>
+    <!-- END nav -->
+	
+	<section class="ftco-cover" style="background-image: url(images/bg_3.jpg);" id="section-home">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center ftco-vh-100">
+          <div class="col-md-12">
+            <h1 class="ftco-heading ftco-animate mb-3">Welcome To [PlatformName]</h1>
+            <h2 class="h5 ftco-subheading mb-5 ftco-animate">[PlatformDescription]
+              <!--<a href="#" target="_blank">[PlatformName]</a>-->
+            </h2>
+
+            <!-- Call hidden modals located in the bottom of this page -->
+            <p class="d-inline-block">
+              <a href="#section-home" class="btn btn-outline-white btn-lg ftco-animate">Shop online</a>
+            </p>   
+            <p class="d-inline-block">
+                <a href="login.html" class="btn btn-outline-white btn-lg ftco-animate">Log in</a>
+                <!--<a href="#" target="_blank" class="btn btn-outline-white btn-lg ftco-animate" data-toggle="modal" data-target="#createUserModal">Log in</a>-->
+            </p>
+
+          </div>
+			
 	
 	
-<script>
-function submitAndShare()
-{
-	// get the selected answer
-	var playerName = 'George L.';
-	var val = '';
-	var form = document.getElementById('star_trek_quiz');
-	var answers = form.elements['answer'];
+			
+        </div>
+      </div>
+    </section>
+    <!-- END Home Cover section -->
+		
+	<!-- ********** RENDER CONTENT HERE ********** -->
 	
-	for(var i=0; i<answers.length; i++)
-	{
-		if(answers[i].checked)
-		{
-			val = answers[i].value;
-			break;
-		}
-	}
+	<div class="container text-center"> 
+		
+		<div class="col-md-12">     
+          <!-- Add Div: data-ng-controller="" action="ManageProduct" -->
+          <div class="col-md-3 mx-1 my-4 d-inline-block text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line">
+            <div class="productForm">
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>				
+			<div class="count-input space-bottom">
+              <a class="incr-btn" data-action="decrease" href="#">–</a>
+              <input class="quantity" type="text" name="quantity" value="1">
+              <a class="incr-btn" data-action="increase" href="#">+</a>
+              </div>				
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+      
+              <div class="mx-1 my-3 row">
+				<a class="btnAddToCart btn " href="#">Add to Cart</a>
+                <div id="stars" class="starrr"><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span></div> 
+               
+              </div>
+
+            </div>
+          </div><!-- END Procude 1 -->
+
+          <div class="col-md-3 mx-1 d-inline-block my-4 text-center product">	
+            <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+            <hr class="line">
+            <div class="productForm">
+              <h3>
+                Apple Green
+                <span class="d-block my-2">$ 22.5</span>
+              </h3>
+			  <div class="count-input space-bottom">
+				<a class="incr-btn" data-action="decrease" href="#">–</a>
+              	<input class="quantity" type="text" name="quantity" value="1">
+                <a class="incr-btn" data-action="increase" href="#">+</a>
+              </div>
+              <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                Not thoughts all exercise blessing. Indulgence way everything
+                joy alteration boisterous the attachment. Party we years to order 
+                allow asked of.
+              </p>			
+      
+               <div class="mx-1 my-3 row">
+				<a class="btnAddToCart btn " href="#">Add to Cart</a>
+                <div id="stars" class="starrr"><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span></div> 
+               
+              </div>
+
+
+            </div>
+          </div><!-- END Procude 2 -->
+
+          <div class="col-md-3 mx-1 d-inline-block my-4 text-center product">	
+              <img class="mx-1 my-3 productPhoto" src="images/menu_1.jpg" alt="[ALT_PRODUCE_PIC]">		
+              <hr class="line">
+              <div class="productForm">
+                <h3>
+                  Apple Green
+                  <span class="d-block my-2">$ 22.5</span>
+                </h3>
+				<div class="count-input space-bottom">
+					<a class="incr-btn" data-action="decrease" href="#">–</a>
+              		<input class="quantity" type="text" name="quantity" value="1">
+              		<a class="incr-btn" data-action="increase" href="#">+</a>
+              </div>
+                <p class="px-1 py-3">Yet bed any for travelling assistance indulgence unpleasing. 
+                  Not thoughts all exercise blessing. Indulgence way everything
+                  joy alteration boisterous the attachment. Party we years to order 
+                  allow asked of.
+                </p>			
+        
+                <div class="mx-1 my-3 row">
+				<a class="btnAddToCart btn " href="#">Add to Cart</a>
+                <div id="stars" class="starrr"><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span><span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span></div> 
+               
+		      </div>
+              </div>
+            </div><!-- END Procude 3 -->
+	  </div>
+		
+	</div><!-- END Container -->
 	
-	var title = '';
-	var description = '';
-	var image = '';
-	switch(val)
-	{
-		case 'Tiberius':
-				title = playerName + ' is wise like Yoda!';
-				description = 'Congratulations! ' + playerName + ' is the champion of the StarTrek geekhood - and nobody can beat him. Or ... ? Click to play and prove to the ' + playerName + ' that you are as good as  him!';
-				image = 'https://www.planwallpaper.com/static/images/beautiful-sunset-images-196063.jpg'; //'http://drib.tech/fbsharetest/pic1.jpg';
-			break;
-		default:
-				title = playerName + ' is wise like Jar Jar Binks!';
-				description = playerName + 'is the champion of the StarTrek geekhood - NOT! Click to play and prove to the ' + playerName + ' that anybody is better then him!';
-				image = 'https://github.com/the-current-projets/the-current-projets.github.io/blob/master/images/image2.jpg?raw=true'; //'http://drib.tech/fbsharetest/image2.jpg';
-			break;
-	}
+	<!-- ********** RENDER CONTENT HERE ********** -->
 	
 	
-	// and finally share it
-	
-	shareOverrideOGMeta(window.location.href,
-						title,
-						description,
-						image);
-	
-	return false;
-}
- 
-function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
-{
-	FB.ui({
-		method: 'share_open_graph',
-		action_type: 'og.shares',
-		action_properties: JSON.stringify({
-			object: {
-				'og:url': overrideLink,
-				'og:title': overrideTitle,
-				'og:description': overrideDescription,
-				'og:image': overrideImage
-			}
-		})
-	},
-	function (response) {
-	// Action after response
-	});
-}
- 
-function shareOriginal()
-{
-	FB.ui({
-		method: 'share',
-		href: window.location.href
-	},
-	function (response) {
-	// Action after response
-	});
-	
-	return false;
-}
- 
-</script>
-</body>
-</html>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md ftco-animate">
+                <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">[PlatformName]</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="py-2 d-block">About Us</a></li>
+                    <li><a href="#" class="py-2 d-block">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md ftco-animate">
+                 <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Communities</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="py-2 d-block">Farmers</a></li>
+                    <li><a href="#" class="py-2 d-block">Produce</a></li>
+                    <li><a href="#" class="py-2 d-block">Promotions</a></li>
+                  </ul>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <ul class="ftco-footer-social list-unstyled float-md-right float-lft">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md text-left">
+            <p>&copy; [PlatformName] 2018. All Rights Reserved.  
+              <!--Made with <span class="icon-heart text-danger"></span>  by <a href="#">Free-Template.co</a>-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader SVG -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>  
+  </body>
+</html>	
